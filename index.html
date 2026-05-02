@@ -1,1168 +1,1036 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>تعبير | حقائب نسائية فاخرة في السعودية</title>
-  <meta name="description" content="تعبير — اختلافك تعبيرك. مجموعة مختارة بعناية من الحقائب النسائية الفاخرة." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <style>
-    /* ========================
-       DESIGN SYSTEM — TABEER
-       ======================== */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>تعبير | TABEER</title>
+<meta name="description" content="اختلافكِ تعبيركِ — حقائب نسائية فاخرة، كل قطعة واحدة فقط"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<style>
+/* ═══════════════════════════════════════════════
+   TABEER — BLACK & WHITE EDITORIAL 2026
+   Inspired by poetry bride aesthetic
+═══════════════════════════════════════════════ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 
-    :root {
-      --radius: 0.25rem;
-      --cream:            oklch(0.97 0.012 80);
-      --cream-deep:       oklch(0.94 0.018 80);
-      --mocha:            oklch(0.32 0.035 50);
-      --mocha-soft:       oklch(0.45 0.04  45);
-      --rose:             oklch(0.78 0.06  25);
-      --gold:             oklch(0.72 0.11  75);
-      --gold-deep:        oklch(0.58 0.12  70);
+:root{
+  --black:#000;--white:#fff;--grey:#888;
+  --light:#f5f5f5;--border:rgba(0,0,0,.1);
+  --font:'Noto Kufi Arabic',sans-serif;
+}
 
-      --background:          oklch(0.97 0.012 80);
-      --foreground:          oklch(0.22 0.025 50);
-      --card:                oklch(0.99 0.006 80);
-      --card-foreground:     oklch(0.22 0.025 50);
-      --primary:             oklch(0.32 0.035 50);
-      --primary-foreground:  oklch(0.97 0.012 80);
-      --secondary:           oklch(0.94 0.018 80);
-      --secondary-foreground:oklch(0.32 0.035 50);
-      --muted:               oklch(0.94 0.018 80);
-      --muted-foreground:    oklch(0.5  0.03  50);
-      --accent:              oklch(0.72 0.11  75);
-      --accent-foreground:   oklch(0.22 0.025 50);
-      --destructive:         oklch(0.55 0.2   25);
-      --destructive-foreground: oklch(0.97 0.012 80);
-      --border:              oklch(0.88 0.018 70);
-      --shadow-soft:    0 10px 40px -15px oklch(0.32 0.035 50 / 0.15);
-      --shadow-elegant: 0 25px 60px -20px oklch(0.32 0.035 50 / 0.25);
-    }
+html{scroll-behavior:smooth;cursor:none}
+body{
+  background:var(--white);color:var(--black);
+  font-family:var(--font);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;min-height:100vh;
+}
 
-    html { scroll-behavior: smooth; }
+/* ── CUSTOM CURSOR ──────────────────────────── */
+#cursor{
+  position:fixed;width:8px;height:8px;
+  background:var(--black);border-radius:50%;
+  pointer-events:none;z-index:9999;
+  transform:translate(-50%,-50%);
+  transition:transform .15s,width .3s,height .3s,background .3s;
+}
+#cursor-ring{
+  position:fixed;width:36px;height:36px;
+  border:1px solid rgba(0,0,0,.35);border-radius:50%;
+  pointer-events:none;z-index:9998;
+  transform:translate(-50%,-50%);
+  transition:transform .08s linear,width .3s,height .3s,border-color .3s;
+}
+body:has(a:hover) #cursor,body:has(button:hover) #cursor{width:12px;height:12px;background:var(--black)}
+body:has(a:hover) #cursor-ring,body:has(button:hover) #cursor-ring{width:50px;height:50px;border-color:rgba(0,0,0,.5)}
+a,button,.product-card{cursor:none}
 
-    body {
-      background-color: var(--background);
-      color: var(--foreground);
-      font-family: 'Tajawal', 'Cairo', system-ui, sans-serif;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-      min-height: 100vh;
-    }
+/* ── BASE ───────────────────────────────────── */
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+button{cursor:none;border:none;background:none;font-family:inherit}
 
-    h1, h2, h3, h4, .font-display {
-      font-family: 'Playfair Display', 'Amiri', serif;
-      letter-spacing: -0.01em;
-    }
+.container{width:100%;max-width:1400px;margin:0 auto;padding:0 3rem}
+.page{display:none;flex-direction:column;min-height:100vh}
+.page.active{display:flex}
 
-    img { max-width: 100%; display: block; }
-    a { text-decoration: none; color: inherit; }
-    button { cursor: pointer; border: none; background: none; font-family: inherit; }
-    input, textarea { font-family: inherit; }
+/* ── ANIMATIONS ─────────────────────────────── */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(40px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes slideInRight{from{opacity:0;transform:translateX(60px)}to{opacity:1;transform:translateX(0)}}
+@keyframes slideInLeft{from{opacity:0;transform:translateX(-60px)}to{opacity:1;transform:translateX(0)}}
+@keyframes scaleIn{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
+@keyframes marqueeMove{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
 
-    .container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
+.reveal{opacity:0;transform:translateY(35px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-left{opacity:0;transform:translateX(-40px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1)}
+.reveal-left.visible{opacity:1;transform:translateX(0)}
+.reveal-right{opacity:0;transform:translateX(40px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1)}
+.reveal-right.visible{opacity:1;transform:translateX(0)}
+.reveal-scale{opacity:0;transform:scale(.93);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)}
+.reveal-scale.visible{opacity:1;transform:scale(1)}
 
-    /* ========================
-       ANIMATIONS
-       ======================== */
-    @keyframes fade-up {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    .animate-fade-up { animation: fade-up 0.8s cubic-bezier(0.4,0,0.2,1) both; }
+/* ── HEADER ─────────────────────────────────── */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:500;
+  display:flex;align-items:center;justify-content:space-between;
+  height:5rem;padding:0 3rem;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border);
+  transition:all .4s;
+}
+header.scrolled{height:4rem;box-shadow:0 1px 20px rgba(0,0,0,.06)}
 
-    /* ========================
-       PAGE ROUTING
-       ======================== */
-    .page { display: none; flex-direction: column; min-height: 100vh; }
-    .page.active { display: flex; }
+.header-logo{
+  position:absolute;left:50%;transform:translateX(-50%);
+  display:flex;align-items:center;
+}
+.header-logo img{height:2.25rem;width:auto}
+.header-logo-click{cursor:none}
 
-    /* ========================
-       HEADER
-       ======================== */
-    header {
-      position: sticky; top: 0; z-index: 50;
-      backdrop-filter: blur(12px);
-      background: oklch(0.97 0.012 80 / 0.85);
-      border-bottom: 1px solid var(--border);
-    }
-    .header-inner {
-      display: flex; align-items: center; justify-content: space-between;
-      height: 5rem;
-    }
-    .logo { display: flex; flex-direction: column; align-items: flex-start; line-height: 1; cursor: pointer; }
-    .logo-ar { font-family: 'Playfair Display','Amiri',serif; font-size: 1.875rem; color: var(--primary); letter-spacing: -0.01em; }
-    .logo-en { font-size: 0.625rem; color: var(--muted-foreground); letter-spacing: 0.3em; margin-top: 0.25rem; }
+.header-left,.header-right{display:flex;align-items:center;gap:2rem}
 
-    nav { display: flex; align-items: center; gap: 2.5rem; }
-    nav a {
-      font-size: 0.875rem; color: oklch(0.22 0.025 50 / 0.8);
-      transition: color 0.2s;
-    }
-    nav a:hover, nav a.active { color: var(--accent); }
+.nav-item{
+  font-size:.75rem;letter-spacing:.2em;font-weight:400;
+  color:var(--black);position:relative;padding:.25rem 0;
+  transition:opacity .2s;
+}
+.nav-item::after{
+  content:'';position:absolute;bottom:0;right:0;left:100%;
+  height:1px;background:var(--black);
+  transition:left .35s cubic-bezier(.22,1,.36,1);
+}
+.nav-item:hover::after{left:0}
+.nav-item:hover{opacity:.65}
 
-    .header-actions { display: flex; align-items: center; gap: 1rem; }
-    .icon-btn {
-      color: oklch(0.22 0.025 50 / 0.7); transition: color 0.2s;
-      background: none; border: none; cursor: pointer; position: relative;
-    }
-    .icon-btn:hover { color: var(--accent); }
-    .icon-btn svg { width: 1.25rem; height: 1.25rem; }
-    .cart-badge {
-      position: absolute; top: -0.25rem; right: -0.5rem;
-      background: var(--accent); color: var(--accent-foreground);
-      font-size: 0.625rem; width: 1rem; height: 1rem;
-      border-radius: 50%; display: flex; align-items: center; justify-content: center;
-      font-weight: 600;
-    }
+.header-icon{
+  width:2.25rem;height:2.25rem;display:flex;align-items:center;justify-content:center;
+  color:var(--black);transition:transform .2s;
+}
+.header-icon:hover{transform:scale(1.1)}
+.header-icon svg{width:1.1rem;height:1.1rem;stroke:currentColor;stroke-width:1.5;fill:none}
 
-    /* Mobile nav */
-    .mobile-menu-btn { display: none; }
-    .mobile-nav {
-      display: none; flex-direction: column; gap: 0;
-      background: var(--background); border-top: 1px solid var(--border);
-      padding: 1rem 1.5rem;
-    }
-    .mobile-nav.open { display: flex; }
-    .mobile-nav a {
-      padding: 0.75rem 0; border-bottom: 1px solid var(--border);
-      font-size: 0.9375rem; color: var(--foreground);
-    }
-    .mobile-nav a:last-child { border-bottom: none; }
-    .mobile-nav a:hover { color: var(--accent); }
+.ham{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:.25rem}
+.ham span{display:block;width:20px;height:1px;background:var(--black);transition:all .3s}
+.ham.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.ham.open span:nth-child(2){opacity:0}
+.ham.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
 
-    @media (max-width: 768px) {
-      nav { display: none; }
-      .mobile-menu-btn { display: block; }
-      .why-grid { grid-template-columns: 1fr !important; }
-    }
+.mobile-nav{
+  display:none;position:fixed;top:5rem;left:0;right:0;
+  background:var(--white);border-bottom:1px solid var(--border);
+  z-index:499;flex-direction:column;
+}
+.mobile-nav.open{display:flex}
+.mobile-nav a{
+  padding:1rem 2rem;font-size:.875rem;letter-spacing:.15em;
+  border-bottom:1px solid var(--border);transition:background .2s;
+}
+.mobile-nav a:hover{background:var(--light)}
 
-    /* ========================
-       HERO
-       ======================== */
-    .hero-section { position: relative; overflow: hidden; }
-    .hero-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
-      align-items: center; padding: 4rem 0 6rem;
-    }
-    .hero-content { display: flex; flex-direction: column; gap: 2rem; order: 2; }
-    .hero-label {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      font-size: 0.75rem; letter-spacing: 0.3em; color: var(--accent);
-    }
-    .hero-label-line { width: 2rem; height: 1px; background: var(--accent); }
-    .hero-title { font-family: 'Playfair Display','Amiri',serif; font-size: clamp(3rem,7vw,5rem); color: var(--primary); line-height: 1.05; }
-    .hero-title em { font-style: italic; color: var(--accent); }
-    .hero-desc { font-size: 1.125rem; color: var(--muted-foreground); line-height: 1.8; max-width: 28rem; }
-    .hero-btns { display: flex; flex-wrap: wrap; gap: 1rem; }
-      background: var(--primary); color: var(--primary-foreground);
-      padding: 1rem 2rem; font-size: 0.875rem; letter-spacing: 0.15em;
-      transition: background 0.2s; white-space: nowrap;
-    }
-    .btn-primary:hover { background: var(--mocha-soft); }
-    .btn-outline {
-      border: 1px solid oklch(0.32 0.035 50 / 0.2); color: var(--primary);
-      padding: 1rem 2rem; font-size: 0.875rem; letter-spacing: 0.15em;
-      transition: all 0.2s; white-space: nowrap;
-    }
-    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+@media(max-width:900px){
+  .header-left nav,.header-right .nav-item{display:none}
+  .ham{display:flex}
+}
 
-    .hero-image { position: relative; order: 1; }
-    .hero-image .glow-1 {
-      position: absolute; top: -1rem; right: -1rem;
-      width: 8rem; height: 8rem;
-      background: oklch(0.72 0.11 75 / 0.1); border-radius: 50%; filter: blur(48px);
-    }
-    .hero-image .glow-2 {
-      position: absolute; bottom: -2rem; left: -2rem;
-      width: 12rem; height: 12rem;
-      background: oklch(0.78 0.06 25 / 0.2); border-radius: 50%; filter: blur(48px);
-    }
-    .hero-img-wrap {
-      position: relative; aspect-ratio: 3/4; overflow: hidden;
-    }
-    .hero-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
-    .hero-badge {
-      position: absolute; bottom: 1.5rem; right: 1.5rem;
-      background: oklch(0.97 0.012 80 / 0.95); backdrop-filter: blur(8px);
-      padding: 1.25rem; max-width: 12.5rem;
-      box-shadow: var(--shadow-elegant);
-    }
-    .hero-badge-label { font-size: 0.75rem; letter-spacing: 0.15em; color: var(--accent); margin-bottom: 0.5rem; }
-    .hero-badge-name { font-family: 'Playfair Display','Amiri',serif; font-size: 1.125rem; color: var(--primary); }
-    .hero-badge-price { font-size: 0.875rem; color: var(--muted-foreground); margin-top: 0.25rem; }
+/* ── HERO ────────────────────────────────────── */
+.hero{
+  position:relative;min-height:100svh;
+  display:flex;align-items:flex-end;
+  padding-bottom:6rem;overflow:hidden;
+  background:var(--black);
+}
+.hero-bg{
+  position:absolute;inset:0;z-index:0;
+}
+.hero-bg img{
+  width:100%;height:100%;object-fit:cover;
+  opacity:.6;filter:grayscale(30%) contrast(1.1);
+  transform:scale(1.05);
+  animation:heroZoom 12s ease-in-out infinite alternate;
+}
+@keyframes heroZoom{from{transform:scale(1.05)}to{transform:scale(1.0)}}
+.hero-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.85) 0%,rgba(0,0,0,.2) 50%,rgba(0,0,0,.3) 100%);
+  z-index:1;
+}
+.hero-content{
+  position:relative;z-index:2;width:100%;
+  display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:flex-end;
+}
+.hero-text{animation:fadeUp .9s .2s both}
+.hero-eyebrow{
+  font-size:.65rem;letter-spacing:.5em;color:rgba(255,255,255,.5);
+  font-weight:300;margin-bottom:2rem;display:flex;align-items:center;gap:1rem;
+}
+.hero-eyebrow::before{content:'';width:2.5rem;height:1px;background:rgba(255,255,255,.4)}
+.hero-title{
+  font-size:clamp(3.5rem,8vw,7rem);color:var(--white);
+  font-weight:300;line-height:.95;margin-bottom:2.5rem;
+}
+.hero-title strong{font-weight:700;display:block;font-size:.6em}
+.hero-cta{display:flex;gap:1.5rem;align-items:center}
+.btn-white{
+  background:var(--white);color:var(--black);
+  padding:.875rem 2.5rem;font-size:.75rem;letter-spacing:.2em;font-weight:600;
+  font-family:var(--font);transition:all .3s;display:inline-block;
+}
+.btn-white:hover{background:var(--black);color:var(--white)}
+.btn-text-white{
+  font-size:.75rem;letter-spacing:.2em;color:var(--white);
+  border-bottom:1px solid rgba(255,255,255,.4);padding-bottom:2px;
+  transition:border-color .2s;display:inline-block;
+}
+.btn-text-white:hover{border-color:var(--white)}
+.hero-side{
+  text-align:left;color:var(--white);animation:fadeUp .9s .4s both;
+}
+[dir="rtl"] .hero-side{text-align:right}
+.hero-side-label{font-size:.65rem;letter-spacing:.3em;color:rgba(255,255,255,.45);margin-bottom:1rem;font-weight:300}
+.hero-side-text{font-size:1rem;line-height:1.9;color:rgba(255,255,255,.7);max-width:22rem;font-weight:300}
 
-    /* ========================
-       FEATURES STRIP
-       ======================== */
-    .features-strip {
-      background: oklch(0.94 0.018 80 / 0.4);
-      padding: 2rem 0;
-      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
-    }
-    .features-inner {
-      display: flex; flex-wrap: wrap; align-items: center;
-      justify-content: space-around; gap: 1.5rem; text-align: center;
-    }
-    .feature-ar { font-size: 0.875rem; font-weight: 500; color: var(--primary); }
-    .feature-en { font-size: 0.625rem; letter-spacing: 0.25em; color: var(--muted-foreground); margin-top: 0.25rem; }
+.hero-scroll{
+  position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);
+  z-index:2;display:flex;flex-direction:column;align-items:center;gap:.5rem;
+}
+.hero-scroll span{font-size:.55rem;letter-spacing:.4em;color:rgba(255,255,255,.4)}
+.hero-scroll-line{width:1px;height:3rem;background:rgba(255,255,255,.3);animation:scrollLine 2s ease-in-out infinite}
+@keyframes scrollLine{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
 
-    /* ========================
-       SECTION HEADERS
-       ======================== */
-    .section-tag { font-size: 0.75rem; letter-spacing: 0.3em; color: var(--accent); }
-    .section-title { font-family: 'Playfair Display','Amiri',serif; font-size: clamp(2rem,4vw,3rem); color: var(--primary); }
+/* ── TICKER ──────────────────────────────────── */
+.ticker{
+  overflow:hidden;background:var(--black);color:var(--white);
+  padding:.7rem 0;border-top:1px solid rgba(255,255,255,.1);
+}
+.ticker-track{
+  display:flex;white-space:nowrap;gap:0;
+  animation:marqueeMove 25s linear infinite;
+}
+.ticker-item{
+  display:flex;align-items:center;gap:3rem;padding:0 1.5rem;
+  font-size:.65rem;letter-spacing:.35em;font-weight:300;
+  color:rgba(255,255,255,.65);
+}
+.ticker-dot{width:4px;height:4px;background:rgba(255,255,255,.35);border-radius:50%;flex-shrink:0}
 
-    /* ========================
-       PRODUCT CARDS
-       ======================== */
-    .products-section { padding: 6rem 0; }
-    .products-header {
-      display: flex; flex-wrap: wrap; align-items: flex-end;
-      justify-content: space-between; gap: 1.5rem; margin-bottom: 4rem;
-    }
-    .view-all {
-      font-size: 0.875rem; color: var(--primary);
-      border-bottom: 1px solid var(--primary);
-      padding-bottom: 0.25rem; transition: all 0.2s; cursor: pointer;
-    }
-    .view-all:hover { color: var(--accent); border-color: var(--accent); }
+/* ── SECTION BASE ────────────────────────────── */
+.section{padding:8rem 0}
+.section-sm{padding:5rem 0}
+.eyebrow{
+  font-size:.65rem;letter-spacing:.4em;color:var(--grey);
+  font-weight:400;margin-bottom:1rem;display:block;
+}
+.section-title{font-size:clamp(2.5rem,5vw,4rem);font-weight:300;line-height:1.05;margin-bottom:3rem}
+.section-title strong{font-weight:700}
+.text-body{font-size:.9375rem;line-height:2.1;color:#333;font-weight:300}
 
-    .products-grid {
-      display: grid; gap: 1.5rem 2.5rem;
-      grid-template-columns: repeat(4, 1fr);
-    }
-    .products-grid-3 { grid-template-columns: repeat(3, 1fr); }
-    .products-grid-2 { grid-template-columns: repeat(2, 1fr); }
+/* ── PRODUCTS GRID ───────────────────────────── */
+.products-intro{text-align:center;max-width:40rem;margin:0 auto 4rem}
+.products-eyebrow{margin-bottom:.75rem}
+.products-title{font-size:clamp(2.5rem,4vw,3.5rem);font-weight:200;letter-spacing:-.01em}
 
-    .product-card { display: block; cursor: pointer; }
-    .product-card:hover .product-img-inner { transform: scale(1.05); }
-    .product-card:hover .product-name { color: var(--accent); }
-    .product-card:hover .product-overlay { opacity: 1; }
+.products-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1px;background:var(--border);
+}
+.products-grid-3{grid-template-columns:repeat(3,1fr)}
 
-    .product-img-wrap {
-      position: relative; overflow: hidden;
-      background: var(--secondary); aspect-ratio: 4/5; margin-bottom: 1rem;
-    }
-    .product-img-inner {
-      width: 100%; height: 100%; object-fit: cover;
-      transition: transform 0.7s cubic-bezier(0.4,0,0.2,1);
-    }
-    .badge {
-      position: absolute; top: 1rem; right: 1rem;
-      font-size: 0.625rem; letter-spacing: 0.15em; padding: 0.25rem 0.75rem;
-    }
-    .badge-new { background: var(--accent); color: var(--accent-foreground); }
-    .badge-best { background: var(--primary); color: var(--primary-foreground); }
-    .badge-sale {
-      position: absolute; top: 1rem; left: 1rem;
-      background: var(--destructive); color: var(--destructive-foreground);
-      font-size: 0.625rem; letter-spacing: 0.15em; padding: 0.25rem 0.75rem;
-    }
-    .product-overlay {
-      position: absolute; inset-inline: 0; bottom: 0; padding: 1rem;
-      background: linear-gradient(to top, oklch(0.32 0.035 50 / 0.8), transparent);
-      opacity: 0; transition: opacity 0.3s;
-    }
-    .product-overlay-btn {
-      width: 100%; background: var(--background); color: var(--foreground);
-      padding: 0.5rem; font-size: 0.875rem; font-weight: 500;
-      transition: all 0.2s; cursor: pointer; border: none; font-family: inherit;
-    }
-    .product-overlay-btn:hover { background: var(--accent); color: var(--accent-foreground); }
-    .product-category { font-size: 0.75rem; color: var(--muted-foreground); letter-spacing: 0.1em; }
-    .product-name {
-      font-family: 'Playfair Display','Amiri',serif; font-size: 1.125rem;
-      color: var(--foreground); transition: color 0.2s; margin-top: 0.25rem;
-    }
-    .product-pricing { display: flex; align-items: baseline; gap: 0.5rem; margin-top: 0.25rem; }
-    .product-price { font-weight: 500; }
-    .product-old-price { font-size: 0.875rem; color: var(--muted-foreground); text-decoration: line-through; }
+.product-card{
+  background:var(--white);position:relative;overflow:hidden;
+  display:flex;flex-direction:column;
+}
 
-    /* ========================
-       STORY BAND
-       ======================== */
-    .story-band {
-      background: var(--primary); color: var(--primary-foreground);
-      padding: 6rem 0;
-    }
-    .story-band-inner { text-align: center; max-width: 48rem; margin: 0 auto; }
-    .story-quote {
-      font-family: 'Playfair Display','Amiri',serif;
-      font-size: clamp(1.75rem,3.5vw,2.5rem); margin-bottom: 2rem; line-height: 1.4;
-    }
-    .story-text { color: oklch(0.97 0.012 80 / 0.8); line-height: 1.8; font-size: 1.125rem; }
-    .btn-accent-outline {
-      display: inline-block; margin-top: 2.5rem;
-      border: 1px solid var(--accent); color: var(--accent);
-      padding: 1rem 2rem; font-size: 0.875rem; letter-spacing: 0.15em;
-      transition: all 0.2s; cursor: pointer;
-    }
-    .btn-accent-outline:hover { background: var(--accent); color: var(--accent-foreground); }
+/* IMAGE AREA */
+.product-img-wrap{
+  position:relative;overflow:hidden;
+  aspect-ratio:3/4;background:var(--light);
+}
+.product-img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .8s cubic-bezier(.22,1,.36,1), filter .8s;
+  filter:grayscale(10%);
+}
+.product-card:hover .product-img{transform:scale(1.08);filter:grayscale(5%)}
 
-    /* ========================
-       SHOP PAGE
-       ======================== */
-    .shop-hero {
-      background: oklch(0.94 0.018 80 / 0.4); padding: 4rem 0;
-      border-bottom: 1px solid var(--border); text-align: center;
-    }
-    .shop-filters {
-      display: flex; flex-wrap: wrap; gap: 0.75rem;
-      justify-content: center; margin-bottom: 3rem;
-      padding-bottom: 1.5rem; border-bottom: 1px solid var(--border);
-    }
-    .filter-btn {
-      padding: 0.5rem 1.25rem; font-size: 0.875rem; letter-spacing: 0.05em;
-      transition: all 0.2s; cursor: pointer; border: none; background: none;
-      font-family: inherit; color: var(--muted-foreground);
-    }
-    .filter-btn:hover { color: var(--primary); }
-    .filter-btn.active { background: var(--primary); color: var(--primary-foreground); }
+/* HOVER OVERLAY */
+.product-overlay{
+  position:absolute;inset:0;
+  background:rgba(0,0,0,.82);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem;
+  opacity:0;transition:opacity .4s cubic-bezier(.22,1,.36,1);
+}
+.product-card:hover .product-overlay{opacity:1}
+.overlay-title{
+  font-size:1.25rem;font-weight:400;color:var(--white);
+  text-align:center;transform:translateY(12px);
+  transition:transform .4s .05s cubic-bezier(.22,1,.36,1);
+}
+.overlay-price{
+  font-size:.875rem;color:rgba(255,255,255,.65);font-weight:300;
+  transform:translateY(12px);transition:transform .4s .1s cubic-bezier(.22,1,.36,1);
+}
+.overlay-btn{
+  background:var(--white);color:var(--black);
+  padding:.65rem 1.75rem;font-size:.7rem;letter-spacing:.2em;font-weight:600;
+  font-family:var(--font);
+  transform:translateY(12px);transition:transform .4s .15s cubic-bezier(.22,1,.36,1),background .2s;
+}
+.overlay-btn:hover{background:rgba(255,255,255,.85)}
+.product-card:hover .overlay-title,
+.product-card:hover .overlay-price,
+.product-card:hover .overlay-btn{transform:translateY(0)}
 
-    /* ========================
-       ABOUT PAGE
-       ======================== */
-    .about-hero-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
-      align-items: center; padding: 5rem 0;
-    }
-    .about-content { display: flex; flex-direction: column; gap: 1.5rem; }
-    .about-title { font-family: 'Playfair Display','Amiri',serif; font-size: clamp(2.5rem,5vw,3.75rem); color: var(--primary); line-height: 1.1; }
-    .about-title em { font-style: italic; color: var(--accent); }
-    .about-text { color: var(--muted-foreground); line-height: 1.9; }
-    .about-img { aspect-ratio: 4/5; overflow: hidden; }
-    .about-img img { width: 100%; height: 100%; object-fit: cover; }
+/* BADGES */
+.badge-new,.badge-sale,.badge-best{
+  position:absolute;top:1.25rem;right:1.25rem;z-index:2;
+  font-size:.6rem;letter-spacing:.2em;font-weight:600;
+  padding:.25rem .75rem;
+}
+.badge-new{background:var(--black);color:var(--white)}
+.badge-sale{background:var(--white);color:var(--black);border:1px solid var(--border);top:1.25rem;left:1.25rem;right:auto}
+.badge-best{background:var(--black);color:var(--white)}
 
-    .values-section { background: oklch(0.94 0.018 80 / 0.4); padding: 6rem 0; }
-    .values-header { text-align: center; margin-bottom: 4rem; }
-    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
-    .value-card {
-      background: var(--card); padding: 2.5rem; text-align: center;
-      border: 1px solid var(--border);
-    }
-    .value-icon { font-size: 2.5rem; color: var(--accent); margin-bottom: 1.5rem; }
-    .value-title { font-family: 'Playfair Display','Amiri',serif; font-size: 1.5rem; color: var(--primary); margin-bottom: 0.75rem; }
-    .value-text { color: var(--muted-foreground); line-height: 1.7; }
+/* PRODUCT INFO */
+.product-info{
+  padding:1rem 1.25rem;border-top:1px solid var(--border);
+  display:flex;align-items:baseline;justify-content:space-between;gap:.5rem;
+}
+.product-name{font-size:.875rem;font-weight:400}
+.product-price{font-size:.8125rem;color:var(--grey);font-weight:300;white-space:nowrap}
+.product-old{text-decoration:line-through;color:#ccc;font-size:.75rem}
 
-    .promise-section { padding: 6rem 0; text-align: center; max-width: 40rem; margin: 0 auto; }
-    .promise-title { font-family: 'Playfair Display','Amiri',serif; font-size: clamp(2rem,4vw,3rem); color: var(--primary); margin-bottom: 1.5rem; }
-    .promise-text { color: var(--muted-foreground); line-height: 1.9; font-size: 1.125rem; }
+/* ── EDITORIAL SPLIT ─────────────────────────── */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch;background:var(--border)}
+.split-img{position:relative;overflow:hidden;aspect-ratio:auto;min-height:600px}
+.split-img img{width:100%;height:100%;object-fit:cover;filter:grayscale(20%);transition:transform .8s,filter .8s}
+.split:hover .split-img img{transform:scale(1.04);filter:grayscale(5%)}
+.split-text{background:var(--white);display:flex;flex-direction:column;justify-content:center;padding:5rem 4rem;gap:1.5rem}
+.split-tag{font-size:.6rem;letter-spacing:.5em;color:var(--grey);font-weight:400;display:block}
+.split-title{font-size:clamp(2rem,4vw,3rem);font-weight:200;line-height:1.1}
+.split-title strong{font-weight:700;display:block}
+.split-body{font-size:.9375rem;color:#444;line-height:2;font-weight:300;max-width:28rem}
+.split-cta{
+  display:inline-flex;align-items:center;gap:.75rem;
+  font-size:.7rem;letter-spacing:.25em;font-weight:600;color:var(--black);
+  border-bottom:1px solid var(--black);padding-bottom:.25rem;
+  transition:opacity .2s;width:fit-content;
+}
+.split-cta:hover{opacity:.6}
 
-    /* ========================
-       CONTACT PAGE
-       ======================== */
-    .contact-header { text-align: center; margin-bottom: 4rem; }
-    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; max-width: 62.5rem; margin: 0 auto; }
-    .contact-form-card { background: var(--card); padding: 2.5rem; border: 1px solid var(--border); }
-    .form-title { font-family: 'Playfair Display','Amiri',serif; font-size: 1.5rem; color: var(--primary); margin-bottom: 1.5rem; }
-    .form-group { margin-bottom: 1.25rem; }
-    .form-label { display: block; font-size: 0.875rem; color: var(--muted-foreground); margin-bottom: 0.5rem; }
-    .form-input, .form-textarea {
-      width: 100%; background: var(--background); border: 1px solid var(--border);
-      padding: 0.75rem 1rem; font-size: 0.875rem; font-family: inherit;
-      outline: none; transition: border-color 0.2s; color: var(--foreground);
-    }
-    .form-input:focus, .form-textarea:focus { border-color: var(--accent); }
-    .form-input::placeholder, .form-textarea::placeholder { color: var(--muted-foreground); }
-    .form-textarea { resize: none; }
-    .btn-form {
-      width: 100%; background: var(--primary); color: var(--primary-foreground);
-      padding: 1rem; font-size: 0.875rem; letter-spacing: 0.15em;
-      cursor: pointer; border: none; font-family: inherit;
-      transition: background 0.2s;
-    }
-    .btn-form:hover { background: var(--mocha-soft); }
+/* ── MARQUEE SECTION ─────────────────────────── */
+.marquee-section{
+  padding:3rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+  overflow:hidden;
+}
+.marquee-large-track{
+  display:flex;white-space:nowrap;gap:0;
+  animation:marqueeMove 20s linear infinite;
+}
+.marquee-large-item{
+  font-size:clamp(3rem,6vw,5rem);font-weight:200;
+  color:var(--light);-webkit-text-stroke:1px var(--black);
+  letter-spacing:-.02em;padding:0 2rem;white-space:nowrap;
+  display:flex;align-items:center;gap:2rem;
+}
+.marquee-large-item span.sep{
+  width:12px;height:12px;background:var(--black);border-radius:50%;
+  display:inline-block;flex-shrink:0;
+}
 
-    .contact-success { text-align: center; padding: 3rem 0; }
-    .success-icon { font-size: 3rem; color: var(--accent); margin-bottom: 1rem; }
-    .success-title { font-family: 'Playfair Display','Amiri',serif; font-size: 1.5rem; color: var(--primary); margin-bottom: 0.5rem; }
-    .success-text { color: var(--muted-foreground); }
+/* ── VALUES ──────────────────────────────────── */
+.values{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1px;background:var(--border);
+}
+.value-item{
+  background:var(--white);padding:3.5rem 2.5rem;
+  transition:background .3s;position:relative;overflow:hidden;
+}
+.value-item::before{
+  content:'';position:absolute;bottom:0;left:0;right:0;
+  height:2px;background:var(--black);
+  transform:scaleX(0);transition:transform .4s cubic-bezier(.22,1,.36,1);
+}
+.value-item:hover{background:var(--light)}
+.value-item:hover::before{transform:scaleX(1)}
+.value-num{
+  font-size:5rem;font-weight:800;color:rgba(0,0,0,.06);
+  line-height:1;margin-bottom:1rem;display:block;
+}
+.value-title{font-size:1.25rem;font-weight:600;margin-bottom:.75rem}
+.value-text{font-size:.875rem;color:var(--grey);line-height:1.9;font-weight:300}
 
-    .contact-info { display: flex; flex-direction: column; gap: 2rem; }
-    .info-title { font-family: 'Playfair Display','Amiri',serif; font-size: 1.5rem; color: var(--primary); margin-bottom: 0.5rem; }
-    .info-sub { color: var(--muted-foreground); }
-    .info-items { display: flex; flex-direction: column; gap: 1.5rem; }
-    .info-item { display: flex; gap: 1rem; align-items: flex-start; }
-    .info-icon {
-      width: 2.5rem; height: 2.5rem; flex-shrink: 0;
-      background: oklch(0.72 0.11 75 / 0.1); color: var(--accent);
-      display: flex; align-items: center; justify-content: center; font-size: 1.125rem;
-    }
-    .info-label { font-size: 0.875rem; color: var(--muted-foreground); }
-    .info-value { color: var(--primary); margin-top: 0.125rem; }
-    .social-card {
-      background: oklch(0.94 0.018 80 / 0.6); padding: 1.5rem;
-      border-right: 2px solid var(--accent);
-    }
-    .social-title { font-family: 'Playfair Display','Amiri',serif; font-size: 1.125rem; color: var(--primary); margin-bottom: 0.5rem; }
-    .social-handle { font-size: 0.875rem; color: var(--muted-foreground); }
+/* ── CONTACT ─────────────────────────────────── */
+.contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--border)}
+.contact-form-side{background:var(--white);padding:5rem 4rem}
+.contact-info-side{background:var(--black);color:var(--white);padding:5rem 4rem;display:flex;flex-direction:column;gap:2.5rem}
+.form-title{font-size:2rem;font-weight:300;margin-bottom:2rem}
+.form-row{margin-bottom:1.25rem}
+.form-lbl{display:block;font-size:.7rem;letter-spacing:.2em;color:var(--grey);margin-bottom:.5rem}
+.form-inp,.form-ta{
+  width:100%;border:none;border-bottom:1px solid var(--border);
+  background:transparent;padding:.75rem 0;font-size:.9375rem;
+  font-family:var(--font);color:var(--black);outline:none;
+  transition:border-color .2s;
+}
+.form-inp:focus,.form-ta:focus{border-color:var(--black)}
+.form-inp::placeholder,.form-ta::placeholder{color:#ccc}
+.form-ta{resize:none;min-height:100px}
+.btn-black{
+  background:var(--black);color:var(--white);
+  padding:.875rem 2.5rem;font-size:.75rem;letter-spacing:.2em;font-weight:600;
+  font-family:var(--font);border:none;cursor:none;
+  transition:all .3s;display:inline-block;
+}
+.btn-black:hover{background:#222}
+.contact-label{font-size:.6rem;letter-spacing:.4em;color:rgba(255,255,255,.4);margin-bottom:.5rem;display:block}
+.contact-val{font-size:.9375rem;color:var(--white);font-weight:300;display:block}
+a.contact-val:hover{color:rgba(255,255,255,.75)}
+.contact-socials{display:flex;gap:1rem;margin-top:.5rem}
+.social-ic{
+  width:2.25rem;height:2.25rem;border:1px solid rgba(255,255,255,.2);
+  display:flex;align-items:center;justify-content:center;
+  color:rgba(255,255,255,.6);transition:all .25s;
+}
+.social-ic:hover{border-color:var(--white);color:var(--white)}
+.social-ic svg{width:.85rem;height:.85rem}
+.success-msg{text-align:center;padding:4rem 0}
+.success-star{font-size:3rem;margin-bottom:1rem;display:block}
+.success-h{font-size:1.5rem;font-weight:300;margin-bottom:.5rem}
+.success-p{color:var(--grey);font-weight:300}
 
-    /* ========================
-       FOOTER
-       ======================== */
-    footer {
-      background: var(--primary); color: var(--primary-foreground);
-      margin-top: 8rem;
-    }
-    .footer-inner { padding: 4rem 0; }
-    .footer-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 3rem; }
-    .footer-brand-name { font-family: 'Playfair Display','Amiri',serif; font-size: 1.875rem; margin-bottom: 0.5rem; }
-    .footer-brand-en { font-size: 0.75rem; letter-spacing: 0.3em; color: oklch(0.97 0.012 80 / 0.6); margin-bottom: 1rem; }
-    .footer-brand-desc { font-size: 0.875rem; color: oklch(0.97 0.012 80 / 0.7); line-height: 1.7; }
-    .footer-heading { font-family: 'Playfair Display','Amiri',serif; font-size: 1.125rem; color: var(--accent); margin-bottom: 1.25rem; }
-    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
-    .footer-links a { font-size: 0.875rem; color: oklch(0.97 0.012 80 / 0.7); transition: color 0.2s; }
-    .footer-links a:hover { color: var(--accent); }
-    .footer-desc { font-size: 0.875rem; color: oklch(0.97 0.012 80 / 0.7); margin-bottom: 1rem; line-height: 1.6; }
-    .footer-form { display: flex; gap: 0.5rem; }
-    .footer-input {
-      flex: 1; background: oklch(0.97 0.012 80 / 0.1);
-      border: 1px solid oklch(0.97 0.012 80 / 0.2);
-      padding: 0.5rem 0.75rem; font-size: 0.875rem; font-family: inherit;
-      color: var(--primary-foreground); outline: none;
-    }
-    .footer-input::placeholder { color: oklch(0.97 0.012 80 / 0.4); }
-    .footer-input:focus { border-color: var(--accent); }
-    .footer-sub-btn {
-      background: var(--accent); color: var(--accent-foreground);
-      padding: 0.5rem 1rem; font-size: 0.875rem; font-weight: 500;
-      cursor: pointer; border: none; font-family: inherit; transition: opacity 0.2s;
-    }
-    .footer-sub-btn:hover { opacity: 0.9; }
-    .footer-bottom {
-      border-top: 1px solid oklch(0.97 0.012 80 / 0.1);
-      margin-top: 3rem; padding-top: 2rem;
-      display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
-      gap: 1rem; font-size: 0.75rem; color: oklch(0.97 0.012 80 / 0.5);
-    }
+/* ── POLICY PAGES ────────────────────────────── */
+.policy-wrap{max-width:48rem;margin:0 auto;padding:8rem 2rem 5rem}
+.policy-page-title{font-size:clamp(2rem,4vw,3rem);font-weight:200;margin:.75rem 0 1rem}
+.policy-intro{color:var(--grey);line-height:2;font-weight:300;margin-bottom:3rem}
+.policy-body{display:flex;flex-direction:column}
+.policy-sec{padding:2rem 0;border-bottom:1px solid var(--border)}
+.policy-sec:last-child{border-bottom:none}
+.policy-sec h3{font-size:1rem;font-weight:600;letter-spacing:.05em;margin-bottom:.875rem}
+.policy-sec p,.policy-sec li{color:var(--grey);line-height:2;font-weight:300;font-size:.9rem}
+.policy-sec ul{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+.policy-sec li{padding-right:1.25rem;position:relative}
+.policy-sec li::before{content:'—';position:absolute;right:0;color:#ccc;font-size:.75rem}
+.policy-sec strong{color:var(--black);font-weight:600}
+.policy-sec a{color:var(--black);border-bottom:1px solid var(--border);transition:border-color .2s}
+.policy-sec a:hover{border-color:var(--black)}
 
-    /* ========================
-       POLICY PAGES
-       ======================== */
-    .policy-body { display:flex; flex-direction:column; gap:2rem; }
-    .policy-section { border-bottom:1px solid var(--border); padding-bottom:2rem; }
-    .policy-section:last-child { border-bottom:none; }
-    .policy-section h3 { font-family:'Playfair Display','Amiri',serif; font-size:1.125rem; color:var(--primary); margin-bottom:0.75rem; }
-    .policy-section p { color:var(--muted-foreground); line-height:1.9; margin-bottom:0.5rem; }
-    .policy-section ul { list-style:none; display:flex; flex-direction:column; gap:0.5rem; padding-right:0; }
-    .policy-section ul li { color:var(--muted-foreground); line-height:1.8; padding-right:1.25rem; position:relative; }
-    .policy-section ul li::before { content:'✦'; position:absolute; right:0; color:var(--accent); font-size:0.5rem; top:0.45em; }
-    .policy-section strong { color:var(--foreground); }
+/* PAYMENT */
+.pay-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);margin:3rem 0}
+.pay-card{background:var(--white);padding:2.5rem;transition:background .25s}
+.pay-card:hover{background:var(--light)}
+.pay-emoji{font-size:2rem;margin-bottom:.75rem;display:block}
+.pay-t{font-size:1rem;font-weight:600;margin-bottom:.4rem}
+.pay-s{color:var(--grey);font-size:.875rem;line-height:1.8;font-weight:300}
+.pay-secure{background:var(--black);color:var(--white);padding:2rem;text-align:center;margin-top:1px}
+.pay-secure-t{font-size:1.25rem;font-weight:300;margin-bottom:.35rem}
+.pay-secure-s{font-size:.75rem;letter-spacing:.1em;color:rgba(255,255,255,.5)}
 
-    /* Pay grid responsive */
-    @media (max-width:600px) { .pay-grid { grid-template-columns:1fr !important; } }
+/* GIFT */
+.gift-steps{background:var(--light);border:1px solid var(--border)}
+.gift-step{display:flex;gap:1.5rem;align-items:flex-start;padding:2rem;border-bottom:1px solid var(--border)}
+.gift-step:last-child{border-bottom:none}
+.step-num{width:2.5rem;height:2.5rem;flex-shrink:0;background:var(--black);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:.875rem;font-weight:700}
+.step-t{font-weight:600;margin-bottom:.3rem}
+.step-s{color:var(--grey);font-size:.875rem;line-height:1.8;font-weight:300}
+.step-s strong{color:var(--black);font-weight:600}
 
-    /* ========================
-       WHATSAPP FLOAT BUTTON
-       ======================== */
-    .wa-float {
-      position:fixed; bottom:1.75rem; left:1.75rem; z-index:999;
-      width:3.25rem; height:3.25rem; border-radius:50%;
-      background:#25d366; color:#fff;
-      display:flex; align-items:center; justify-content:center;
-      box-shadow:0 4px 20px rgba(37,211,102,0.45);
-      transition:transform 0.2s, box-shadow 0.2s;
-      text-decoration:none;
-    }
-    .wa-float:hover { transform:scale(1.1); box-shadow:0 6px 28px rgba(37,211,102,0.55); }
-    .wa-float svg { width:1.75rem; height:1.75rem; }
-    @media (max-width: 1024px) {
-      .products-grid { grid-template-columns: repeat(3,1fr); }
-      .footer-grid { grid-template-columns: repeat(2,1fr); }
-      .values-grid { grid-template-columns: repeat(2,1fr); }
-    }
-    @media (max-width: 768px) {
-      .hero-grid { grid-template-columns: 1fr; padding: 2rem 0 4rem; }
-      .hero-content { order: 1; }
-      .hero-image { order: 2; }
-      .products-grid, .products-grid-3 { grid-template-columns: repeat(2,1fr); gap: 1rem; }
-      .about-hero-grid { grid-template-columns: 1fr; }
-      .contact-grid { grid-template-columns: 1fr; }
-      .values-grid { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 480px) {
-      .footer-grid { grid-template-columns: 1fr; }
-    }
-  </style>
+/* ── FOOTER ──────────────────────────────────── */
+footer{
+  background:var(--black);color:var(--white);
+  padding:5rem 0 2rem;margin-top:auto;
+}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:4rem;margin-bottom:4rem}
+.footer-logo{height:2rem;width:auto;filter:invert(1);margin-bottom:1.25rem}
+.footer-tagline{font-size:.8125rem;color:rgba(255,255,255,.45);line-height:1.9;font-weight:300;max-width:18rem}
+.footer-socials{display:flex;gap:.75rem;margin-top:1.5rem}
+.footer-soc{width:2.25rem;height:2.25rem;border:1px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.5);transition:all .25s}
+.footer-soc:hover{border-color:var(--white);color:var(--white)}
+.footer-soc svg{width:.85rem;height:.85rem}
+.footer-col-title{font-size:.65rem;letter-spacing:.35em;color:rgba(255,255,255,.4);margin-bottom:1.5rem;display:block;font-weight:400}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+.footer-links a{font-size:.875rem;color:rgba(255,255,255,.55);font-weight:300;transition:color .2s}
+.footer-links a:hover{color:var(--white)}
+.footer-email-form{display:flex;margin-top:1rem}
+.footer-email-inp{flex:1;background:transparent;border:none;border-bottom:1px solid rgba(255,255,255,.2);padding:.6rem 0;font-size:.8rem;color:var(--white);font-family:var(--font);outline:none;transition:border-color .2s}
+.footer-email-inp::placeholder{color:rgba(255,255,255,.25)}
+.footer-email-inp:focus{border-color:rgba(255,255,255,.6)}
+.footer-sub-btn{background:var(--white);color:var(--black);padding:.6rem 1.25rem;font-size:.7rem;font-weight:700;font-family:var(--font);border:none;cursor:none;transition:opacity .2s;white-space:nowrap}
+.footer-sub-btn:hover{opacity:.85}
+.footer-email-addr{font-size:.7rem;color:rgba(255,255,255,.25);margin-top:.75rem;direction:ltr;display:block}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem;font-size:.7rem;color:rgba(255,255,255,.3);letter-spacing:.1em}
+.footer-bottom a{color:rgba(255,255,255,.3);transition:color .2s}
+.footer-bottom a:hover{color:rgba(255,255,255,.7)}
+
+/* ── WA FLOAT ────────────────────────────────── */
+.wa-float{
+  position:fixed;bottom:2rem;left:2rem;z-index:499;
+  width:3.25rem;height:3.25rem;border-radius:50%;
+  background:#25d366;color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 24px rgba(37,211,102,.4);transition:transform .25s,box-shadow .25s;
+}
+.wa-float:hover{transform:scale(1.1);box-shadow:0 8px 32px rgba(37,211,102,.5)}
+.wa-float svg{width:1.6rem;height:1.6rem}
+
+/* ── RESPONSIVE ──────────────────────────────── */
+@media(max-width:1100px){
+  .products-grid{grid-template-columns:repeat(3,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:900px){
+  .products-grid{grid-template-columns:repeat(2,1fr)}
+  .split{grid-template-columns:1fr}
+  .split-img{min-height:400px}
+  .contact-wrap{grid-template-columns:1fr}
+  .values{grid-template-columns:1fr}
+  .hero-content{grid-template-columns:1fr}
+  .hero-side{display:none}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:3rem}
+  .container{padding:0 1.5rem}
+  header{padding:0 1.5rem}
+  .section{padding:5rem 0}
+}
+@media(max-width:600px){
+  .products-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr}
+  .pay-grid{grid-template-columns:1fr}
+  .contact-form-side,.contact-info-side{padding:3rem 2rem}
+}
+@media(max-width:480px){
+  .products-grid{grid-template-columns:1fr}
+  .header-logo img{height:1.75rem}
+}
+</style>
 </head>
 <body>
 
-<!-- ============================================================
-     HEADER (shared)
-     ============================================================ -->
-<header>
-  <div class="container header-inner">
-    <div class="logo" onclick="navigate('home')">
-      <span class="logo-ar">تعبير</span>
-      <span class="logo-en">TA'BEER</span>
-    </div>
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
 
-    <nav>
-      <a href="#" class="nav-link active" data-page="home" onclick="navigate('home');return false;">الرئيسية</a>
-      <a href="https://shop.tabeer1.com" class="nav-link" target="_self">المتجر</a>
-      <a href="#" class="nav-link" data-page="about" onclick="navigate('about');return false;">عن تعبير</a>
-      <a href="#" class="nav-link" data-page="contact" onclick="navigate('contact');return false;">تواصلي معنا</a>
+<!-- ════════════════════════════════════════════
+     HEADER
+════════════════════════════════════════════ -->
+<header id="site-header">
+  <div class="header-left">
+    <nav style="display:flex;gap:2rem">
+      <a href="https://shop.tabeer1.com" class="nav-item" target="_self">المتجر</a>
+      <a href="#" class="nav-item" onclick="navigate('about');return false;">عن تعبير</a>
     </nav>
-
-    <div class="header-actions">
-      <a href="https://shop.tabeer1.com" target="_self" class="icon-btn" aria-label="بحث">
-        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-4.34-4.34M19 11a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"/>
-        </svg>
-      </a>
-      <a href="https://shop.tabeer1.com" target="_self" class="icon-btn" aria-label="السلة">
-        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007Z"/>
-        </svg>
-        <span class="cart-badge">0</span>
-      </a>
-      <button class="icon-btn mobile-menu-btn" aria-label="القائمة" onclick="toggleMobileNav()">
-        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
-        </svg>
-      </button>
-    </div>
   </div>
-  <div class="mobile-nav" id="mobileNav">
-    <a href="#" onclick="navigate('home');return false;">الرئيسية</a>
-    <a href="https://shop.tabeer1.com" target="_self">المتجر</a>
-    <a href="#" onclick="navigate('about');return false;">عن تعبير</a>
-    <a href="#" onclick="navigate('contact');return false;">تواصلي معنا</a>
-    <a href="#" onclick="navigate('gift');return false;">إرسال هدية 🎁</a>
-    <a href="#" onclick="navigate('returns');return false;">الاستبدال والاسترجاع</a>
-    <a href="#" onclick="navigate('payment');return false;">طرق الدفع</a>
+
+  <div class="header-logo header-logo-click" onclick="navigate('home')">
+    <img src="logo-black.png" alt="تعبير TABEER"/>
+  </div>
+
+  <div class="header-right" style="display:flex;align-items:center;gap:1.25rem">
+    <a href="#" class="nav-item" onclick="navigate('contact');return false;">تواصلي</a>
+    <a href="https://shop.tabeer1.com" target="_self" class="header-icon" aria-label="بحث">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    </a>
+    <a href="https://shop.tabeer1.com" target="_self" class="header-icon" aria-label="السلة">
+      <svg viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+    </a>
+    <button class="ham" id="hamBtn" onclick="toggleMobileNav()">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
-<!-- ============================================================
+<div class="mobile-nav" id="mobileNav">
+  <a href="#" onclick="navigate('home');return false;">الرئيسية</a>
+  <a href="https://shop.tabeer1.com" target="_self">المتجر</a>
+  <a href="#" onclick="navigate('about');return false;">عن تعبير</a>
+  <a href="#" onclick="navigate('contact');return false;">تواصلي معنا</a>
+  <a href="#" onclick="navigate('gift');return false;">إرسال هدية</a>
+  <a href="#" onclick="navigate('returns');return false;">الاستبدال والاسترجاع</a>
+  <a href="#" onclick="navigate('payment');return false;">طرق الدفع</a>
+</div>
+
+<!-- ════════════════════════════════════════════
      PAGE: HOME
-     ============================================================ -->
+════════════════════════════════════════════ -->
 <div class="page active" id="page-home">
 
   <!-- HERO -->
-  <section class="hero-section">
-    <div class="container hero-grid">
-      <!-- Content -->
-      <div class="hero-content animate-fade-up">
-        <div class="hero-label">
-          <span class="hero-label-line"></span>
-          مجموعة 2026
-        </div>
-        <h1 class="hero-title">
-          اختلافكِ..
-          <br/>
-          <em>تعبيركِ</em>
-        </h1>
-        <p class="hero-desc" style="font-size:1rem;line-height:2;color:var(--muted-foreground);">
-          لأنكِ بصمة لا تتكرر.. اخترنا لكِ ما لا يشبه أحداً.
-        </p>
-        <p class="hero-desc" style="font-size:0.9375rem;line-height:1.85;">
-          في عالم يضج بالتكرار والنسخ المتشابهة، نؤمن في "تعبير" أن حقيبتكِ هي امتداد لشخصيتكِ — وحضور لا يُنسى.
-        </p>
-        <div class="hero-btns">
-          <a class="btn-primary" href="https://shop.tabeer1.com" target="_self">تسوّقي المجموعة</a>
-          <a class="btn-outline" href="#" onclick="navigate('about');return false;">قصة تعبير</a>
-        </div>
-      </div>
-
-      <!-- Image -->
-      <div class="hero-image animate-fade-up">
-        <div class="glow-1"></div>
-        <div class="glow-2"></div>
-        <div class="hero-img-wrap">
-          <img src="herobag.jpg" alt="مجموعة حقائب تعبير الفاخرة" />
-        </div>
-        <div class="hero-badge">
-          <p class="hero-badge-label">تسوّقي الآن</p>
-          <p class="hero-badge-name">مجموعة تعبير</p>
-        </div>
-      </div>
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="herobag.jpg" alt="تعبير — مجموعة الحقائب"/>
     </div>
-  </section>
-
-  <!-- FEATURES STRIP -->
-  <section class="features-strip">
-    <div class="container features-inner">
-      <div><div class="feature-ar">قطعة واحدة فقط لكل تصميم</div><div class="feature-en">ONE-OF-A-KIND PIECES</div></div>
-      <div><div class="feature-ar">توصيل مجاني +500ر.س</div><div class="feature-en">FREE SHIPPING</div></div>
-      <div><div class="feature-ar">إرجاع خلال 14 يوم</div><div class="feature-en">EASY RETURNS</div></div>
-      <div><div class="feature-ar">دفع آمن</div><div class="feature-en">SECURE PAYMENT</div></div>
-    </div>
-  </section>
-
-  <!-- FEATURED PRODUCTS removed - shop embedded below -->
-
-  <!-- WHY TABEER -->
-  <section style="background:var(--secondary);padding:5rem 0;border-top:1px solid var(--border);">
+    <div class="hero-overlay"></div>
     <div class="container">
-      <div style="text-align:center;margin-bottom:3.5rem;">
-        <p class="section-tag">لماذا تختارين تعبير؟</p>
-        <h2 class="section-title" style="margin-top:0.75rem;">كوني الاستثناء</h2>
-        <p style="color:var(--muted-foreground);max-width:38rem;margin:1rem auto 0;line-height:1.85;">
-          في عالم من النسخ.. تعبيركِ
-        </p>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;" class="why-grid">
-        <div style="background:var(--card);border:1px solid var(--border);padding:2.25rem;text-align:center;">
-          <div style="font-size:2rem;color:var(--accent);margin-bottom:1rem;">◈</div>
-          <h3 style="font-family:'Playfair Display','Amiri',serif;font-size:1.25rem;color:var(--primary);margin-bottom:0.75rem;">قطعة واحدة فقط</h3>
-          <p style="color:var(--muted-foreground);font-size:0.9rem;line-height:1.8;">لا نؤمن بالإنتاج الكمي؛ كل تصميم متوفر منه قطعة واحدة فقط، لتضمني تفردكِ في كل مناسبة.</p>
+      <div class="hero-content">
+        <div class="hero-text">
+          <p class="hero-eyebrow">مجموعة ٢٠٢٦</p>
+          <h1 class="hero-title">
+            اختلافكِ<strong>تعبيركِ</strong>
+          </h1>
+          <div class="hero-cta">
+            <a href="https://shop.tabeer1.com" target="_self" class="btn-white">تسوّقي الآن</a>
+            <a href="#" onclick="navigate('about');return false;" class="btn-text-white">قصة تعبير</a>
+          </div>
         </div>
-        <div style="background:var(--card);border:1px solid var(--border);padding:2.25rem;text-align:center;">
-          <div style="font-size:2rem;color:var(--accent);margin-bottom:1rem;">✦</div>
-          <h3 style="font-family:'Playfair Display','Amiri',serif;font-size:1.25rem;color:var(--primary);margin-bottom:0.75rem;">جودة تتحدث عنكِ</h3>
-          <p style="color:var(--muted-foreground);font-size:0.9rem;line-height:1.8;">نختار فقط ما يجمع بين الأناقة الكلاسيكية والروح العصرية، من جهات تعتني بكل تفصيل.</p>
-        </div>
-        <div style="background:var(--card);border:1px solid var(--border);padding:2.25rem;text-align:center;">
-          <div style="font-size:2rem;color:var(--accent);margin-bottom:1rem;">❖</div>
-          <h3 style="font-family:'Playfair Display','Amiri',serif;font-size:1.25rem;color:var(--primary);margin-bottom:0.75rem;">حضور لا يُنسى</h3>
-          <p style="color:var(--muted-foreground);font-size:0.9rem;line-height:1.8;">لأنكِ بصمة لا تتكرر.. اخترنا لكِ ما لا يشبه أحداً، يعكس روحكِ وذوقكِ الخاص.</p>
+        <div class="hero-side">
+          <p class="hero-side-label">TABEER 2026</p>
+          <p class="hero-side-text">لأنكِ بصمة لا تتكرر — في عالم يضج بالنسخ، اخترنا لكِ ما لا يشبه أحداً. كل قطعة واحدة فقط.</p>
         </div>
       </div>
     </div>
+    <div class="hero-scroll">
+      <span>SCROLL</span>
+      <div class="hero-scroll-line"></div>
+    </div>
   </section>
 
-  <!-- STORY BAND -->
-  <section class="story-band">
+  <!-- TICKER -->
+  <div class="ticker">
+    <div class="ticker-track">
+      <div class="ticker-item"><span>قطعة واحدة فقط</span><span class="ticker-dot"></span><span>ONE-OF-A-KIND</span><span class="ticker-dot"></span><span>توصيل مجاني</span><span class="ticker-dot"></span><span>FREE SHIPPING</span><span class="ticker-dot"></span><span>إرجاع ١٤ يوم</span><span class="ticker-dot"></span><span>EASY RETURNS</span><span class="ticker-dot"></span><span>دفع آمن</span><span class="ticker-dot"></span><span>SECURE PAYMENT</span><span class="ticker-dot"></span></div>
+      <div class="ticker-item" aria-hidden="true"><span>قطعة واحدة فقط</span><span class="ticker-dot"></span><span>ONE-OF-A-KIND</span><span class="ticker-dot"></span><span>توصيل مجاني</span><span class="ticker-dot"></span><span>FREE SHIPPING</span><span class="ticker-dot"></span><span>إرجاع ١٤ يوم</span><span class="ticker-dot"></span><span>EASY RETURNS</span><span class="ticker-dot"></span><span>دفع آمن</span><span class="ticker-dot"></span><span>SECURE PAYMENT</span><span class="ticker-dot"></span></div>
+    </div>
+  </div>
+
+  <!-- PRODUCTS -->
+  <section class="section" style="padding-top:6rem">
     <div class="container">
-      <div class="story-band-inner">
-        <p class="section-tag">فلسفتنا في الانتقاء</p>
-        <h2 class="story-quote" style="margin-top:1.5rem;">
-          "كوني الاستثناء،<br/>في عالم من النسخ.. تعبيركِ."
-        </h2>
-        <p class="story-text">
-          في "تعبير" نؤمن أن حقيبتكِ هي امتداد لشخصيتكِ. كل تصميم متوفر منه قطعة واحدة فقط،
-          لتضمني تفردكِ وحضوراً لا يُنسى في كل مناسبة.
-        </p>
-        <a class="btn-accent-outline" href="#" onclick="navigate('about');return false;">تعرفي على تعبير</a>
+      <div class="products-intro reveal">
+        <span class="eyebrow products-eyebrow">المجموعة</span>
+        <h2 class="products-title">قطع تستحق الاقتناء</h2>
+      </div>
+      <div class="products-grid" id="productsGrid">
+        <!-- Products injected by JS -->
+      </div>
+      <div style="text-align:center;margin-top:3rem" class="reveal">
+        <a href="https://shop.tabeer1.com" target="_self" class="btn-black">عرض المجموعة كاملةً</a>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <div id="footer-home"></div>
-</div>
+  <!-- MARQUEE BIG -->
+  <div class="marquee-section reveal">
+    <div class="marquee-large-track">
+      <div class="marquee-large-item">اختلافكِ تعبيركِ<span class="sep"></span>TABEER 2026<span class="sep"></span>ONE OF A KIND<span class="sep"></span>قطعة واحدة فقط<span class="sep"></span></div>
+      <div class="marquee-large-item" aria-hidden="true">اختلافكِ تعبيركِ<span class="sep"></span>TABEER 2026<span class="sep"></span>ONE OF A KIND<span class="sep"></span>قطعة واحدة فقط<span class="sep"></span></div>
+    </div>
+  </div>
 
-<!-- ============================================================
-     PAGE: SHOP
-     ============================================================ -->
-<!-- ============================================================
-     PAGE: ABOUT
-     ============================================================ -->
-<div class="page" id="page-about">
-
-  <!-- Story -->
-  <section class="container" style="padding:5rem 1.5rem 0;">
-    <div class="about-hero-grid">
-      <div class="about-content animate-fade-up">
-        <p class="section-tag">قصتنا</p>
-        <h1 class="about-title">حكاية بدأت<br/><em>بشغف</em></h1>
-        <p class="about-text">
-          تعبير علامة وُلدت من إيمان عميق بأن المرأة تستحق حضوراً لا يُنسى — قطعة تُعبّر عنها قبل أن تتكلم.
-          بدأت رحلتنا بسؤال بسيط: لماذا تتشابه الحقائب وكل امرأة بصمة لا تتكرر؟
-        </p>
-        <p class="about-text">
-          من هذا السؤال وُلد "تعبير" — مساحة تختار فيها ما لا يشبه أحداً. كل تصميم لدينا متوفر منه قطعة واحدة فقط،
-          لتضمني تفردكِ في كل مناسبة ومكان.
-        </p>
+  <!-- SPLIT — ABOUT TEASER -->
+  <section class="section" style="padding:0">
+    <div class="split">
+      <div class="split-img reveal-left">
+        <img src="herobag.jpg" alt="قصة تعبير" loading="lazy"/>
       </div>
-      <div class="about-img">
-        <img src="herobag.jpg" alt="عن تعبير" loading="lazy" />
+      <div class="split-text reveal-right">
+        <span class="split-tag">قصتنا</span>
+        <h2 class="split-title">حكاية بدأت<strong>بشغف</strong></h2>
+        <p class="split-body">تعبير علامة وُلدت من إيمان عميق بأن المرأة تستحق حضوراً لا يُنسى — قطعة تُعبّر عنها قبل أن تتكلم. كل تصميم لدينا متوفر منه قطعة واحدة فقط.</p>
+        <a href="#" onclick="navigate('about');return false;" class="split-cta">اقرئي أكثر →</a>
       </div>
     </div>
   </section>
 
-  <!-- Values -->
-  <section class="values-section">
+  <!-- VALUES -->
+  <section class="section">
     <div class="container">
-      <div class="values-header">
-        <p class="section-tag">قِيَمنا</p>
-        <h2 class="section-title" style="margin-top:0.75rem;">ما يميّز تعبير</h2>
-      </div>
-      <div class="values-grid">
-        <div class="value-card">
-          <div class="value-icon">◈</div>
+      <div class="values">
+        <div class="value-item reveal">
+          <span class="value-num">01</span>
           <h3 class="value-title">قطعة واحدة فقط</h3>
-          <p class="value-text">لا نؤمن بالإنتاج الكمي. كل تصميم متوفر منه قطعة واحدة فقط، لتضمني تفردكِ في كل مناسبة.</p>
+          <p class="value-text">لا نؤمن بالإنتاج الكمي؛ كل تصميم متوفر منه قطعة واحدة فقط، لتضمني تفردكِ في كل مناسبة.</p>
         </div>
-        <div class="value-card">
-          <div class="value-icon">✦</div>
+        <div class="value-item reveal" style="transition-delay:.15s">
+          <span class="value-num">02</span>
           <h3 class="value-title">جودة تتحدث عنكِ</h3>
           <p class="value-text">نختار فقط ما يجمع بين الأناقة الكلاسيكية والروح العصرية، من جهات تعتني بكل تفصيل وخامة.</p>
         </div>
-        <div class="value-card">
-          <div class="value-icon">❖</div>
+        <div class="value-item reveal" style="transition-delay:.3s">
+          <span class="value-num">03</span>
           <h3 class="value-title">حضور لا يُنسى</h3>
-          <p class="value-text">لأنكِ بصمة لا تتكرر.. اخترنا لكِ ما لا يشبه أحداً، يعكس شخصيتكِ ويُعبّر عنكِ.</p>
+          <p class="value-text">لأنكِ بصمة لا تتكرر — اخترنا لكِ ما لا يشبه أحداً، يعكس روحكِ وذوقكِ الخاص.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Promise -->
-  <section>
-    <div class="container" style="padding:6rem 1.5rem;">
-      <div style="text-align:center;max-width:40rem;margin:0 auto;">
-        <p class="section-tag">وعدنا</p>
-        <h2 class="promise-title" style="margin-top:1rem;">كوني الاستثناء،<br/>في عالم من النسخ</h2>
-        <p class="promise-text">
-          نضمن لكِ قطعة لا تجدينها في أيدي أخرى، وإمكانية الإرجاع خلال 14 يوماً، ودعمًا متواصلاً — لأن تجربتكِ مع تعبير تستحق أكثر من مجرد حقيبة.
-        </p>
+  <!-- SECOND PRODUCTS ROW (featured 3) -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="products-grid products-grid-3" id="featuredGrid"><!-- injected --></div>
+    </div>
+  </section>
+
+  <div id="footer-home"></div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     PAGE: ABOUT
+════════════════════════════════════════════ -->
+<div class="page" id="page-about">
+  <section class="split" style="margin-top:5rem">
+    <div class="split-img">
+      <img src="herobag.jpg" alt="عن تعبير" loading="lazy"/>
+    </div>
+    <div class="split-text">
+      <span class="split-tag">قصتنا</span>
+      <h1 class="split-title">حكاية بدأت<strong>بشغف</strong></h1>
+      <p class="split-body">تعبير علامة وُلدت من إيمان عميق بأن المرأة تستحق حضوراً لا يُنسى — قطعة تُعبّر عنها قبل أن تتكلم.</p>
+      <p class="split-body" style="margin-top:1rem">بدأت رحلتنا بسؤال بسيط: لماذا تتشابه الحقائب وكل امرأة بصمة لا تتكرر؟ من هذا السؤال وُلد "تعبير" — كل تصميم متوفر منه قطعة واحدة فقط.</p>
+      <a href="https://shop.tabeer1.com" target="_self" class="split-cta">تسوّقي الآن →</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="values">
+        <div class="value-item reveal">
+          <span class="value-num">01</span>
+          <h3 class="value-title">قطعة واحدة فقط</h3>
+          <p class="value-text">لا نؤمن بالإنتاج الكمي. كل تصميم متوفر منه قطعة واحدة فقط، لتضمني تفردكِ في كل مناسبة.</p>
+        </div>
+        <div class="value-item reveal" style="transition-delay:.15s">
+          <span class="value-num">02</span>
+          <h3 class="value-title">جودة تتحدث عنكِ</h3>
+          <p class="value-text">نختار فقط ما يجمع بين الأناقة الكلاسيكية والروح العصرية، من جهات تعتني بكل تفصيل وخامة.</p>
+        </div>
+        <div class="value-item reveal" style="transition-delay:.3s">
+          <span class="value-num">03</span>
+          <h3 class="value-title">حضور لا يُنسى</h3>
+          <p class="value-text">لأنكِ بصمة لا تتكرر — اخترنا لكِ ما لا يشبه أحداً، يعكس شخصيتكِ ويُعبّر عنكِ.</p>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;background:var(--black);color:var(--white)">
+    <div class="container" style="padding-top:5rem;padding-bottom:5rem;text-align:center">
+      <span class="eyebrow" style="color:rgba(255,255,255,.4)">وعدنا</span>
+      <h2 style="font-size:clamp(2rem,4vw,3.5rem);font-weight:200;max-width:44rem;margin:.75rem auto 0;line-height:1.2">كوني الاستثناء، في عالم من النسخ — نضمن لكِ قطعة لا تجدينها في أيدي أخرى.</h2>
     </div>
   </section>
 
   <div id="footer-about"></div>
 </div>
 
-<!-- ============================================================
+<!-- ════════════════════════════════════════════
      PAGE: CONTACT
-     ============================================================ -->
+════════════════════════════════════════════ -->
 <div class="page" id="page-contact">
-  <section style="padding:5rem 1.5rem;">
-    <div class="container">
-      <div class="contact-header animate-fade-up">
-        <p class="section-tag">تواصلي معنا</p>
-        <h1 class="section-title" style="margin-top:1rem;font-size:clamp(2.5rem,5vw,3.75rem);">نحن هنا لكِ</h1>
-        <p style="color:var(--muted-foreground);max-width:36rem;margin:1rem auto 0;">
-          سواء كان لديكِ استفسار، طلب خاص، أو ترغبين في التعاون معنا، يسعدنا سماع صوتكِ.
-        </p>
+  <div style="height:5rem"></div>
+  <div class="contact-wrap">
+    <div class="contact-form-side">
+      <div id="formWrap">
+        <p class="eyebrow">تواصلي معنا</p>
+        <h2 class="form-title">نحن هنا لكِ</h2>
+        <form onsubmit="submitContact(event)">
+          <div class="form-row"><label class="form-lbl">الاسم</label><input required type="text" class="form-inp" placeholder="اسمكِ الكامل"/></div>
+          <div class="form-row"><label class="form-lbl">البريد الإلكتروني</label><input required type="email" class="form-inp" placeholder="email@example.com" dir="ltr"/></div>
+          <div class="form-row"><label class="form-lbl">رقم الجوال</label><input type="tel" class="form-inp" placeholder="05xxxxxxxx" dir="ltr"/></div>
+          <div class="form-row"><label class="form-lbl">الرسالة</label><textarea required class="form-ta" placeholder="اكتبي رسالتكِ هنا..."></textarea></div>
+          <button type="submit" class="btn-black" style="margin-top:.75rem">إرسال الرسالة</button>
+        </form>
       </div>
+      <div id="successMsg" style="display:none" class="success-msg">
+        <span class="success-star">✦</span>
+        <h3 class="success-h">شكراً لتواصلكِ</h3>
+        <p class="success-p">سنعود إليكِ في أقرب وقت.</p>
+      </div>
+    </div>
 
-      <div class="contact-grid">
-        <!-- Form -->
-        <div class="contact-form-card">
-          <div id="formWrap">
-            <h2 class="form-title">أرسلي رسالتكِ</h2>
-            <form onsubmit="submitContact(event)">
-              <div class="form-group">
-                <label class="form-label">الاسم</label>
-                <input required type="text" class="form-input" placeholder="اسمكِ الكامل" />
-              </div>
-              <div class="form-group">
-                <label class="form-label">البريد الإلكتروني</label>
-                <input required type="email" class="form-input" placeholder="email@example.com" dir="ltr" />
-              </div>
-              <div class="form-group">
-                <label class="form-label">رقم الجوال</label>
-                <input type="tel" class="form-input" placeholder="05xxxxxxxx" dir="ltr" />
-              </div>
-              <div class="form-group">
-                <label class="form-label">الرسالة</label>
-                <textarea required rows="5" class="form-textarea" placeholder="اكتبي رسالتكِ هنا..."></textarea>
-              </div>
-              <button type="submit" class="btn-form">إرسال الرسالة</button>
-            </form>
-          </div>
-          <div class="contact-success" id="successMsg" style="display:none;">
-            <div class="success-icon">✦</div>
-            <h3 class="success-title">شكراً لتواصلكِ</h3>
-            <p class="success-text">سنعود إليكِ خلال 24 ساعة.</p>
-          </div>
+    <div class="contact-info-side">
+      <div>
+        <p class="eyebrow" style="color:rgba(255,255,255,.35)">معلومات التواصل</p>
+        <h2 style="font-size:2rem;font-weight:200;margin-top:.5rem;margin-bottom:2rem">تعبير</h2>
+      </div>
+      <div>
+        <span class="contact-label">البريد الإلكتروني</span>
+        <a href="mailto:hello@tabeer1.com" class="contact-val" dir="ltr">hello@tabeer1.com</a>
+      </div>
+      <div>
+        <span class="contact-label">واتساب</span>
+        <a href="https://wa.me/message/N2KKMN6IP34GB1" target="_blank" class="contact-val" dir="ltr">+966 56 085 8614</a>
+      </div>
+      <div>
+        <span class="contact-label">ساعات العمل</span>
+        <span class="contact-val">السبت – الخميس: ٩ص – ٩م</span>
+      </div>
+      <div>
+        <span class="contact-label">تابعينا</span>
+        <div class="contact-socials">
+          <a href="https://www.instagram.com/tabeer_1.1/" target="_blank" class="social-ic" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg></a>
+          <a href="https://www.tiktok.com/@tabeer_1.1" target="_blank" class="social-ic" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.17 8.17 0 004.79 1.52V6.75a4.85 4.85 0 01-1.02-.06z"/></svg></a>
         </div>
-
-        <!-- Info -->
-        <div class="contact-info">
-          <div>
-            <h3 class="info-title">معلومات التواصل</h3>
-            <p class="info-sub">فريقنا متاح للرد على استفساراتكِ يومياً.</p>
-          </div>
-          <div class="info-items">
-            <div class="info-item">
-              <div class="info-icon">📍</div>
-              <div>
-                <p class="info-label">الموقع</p>
-                <p class="info-value">المملكة العربية السعودية</p>
-              </div>
-            </div>
-            <div class="info-item">
-              <div class="info-icon">✉</div>
-              <div>
-                <p class="info-label">البريد الإلكتروني</p>
-                <a href="mailto:hello@tabeer1.com" class="info-value" dir="ltr" style="color:var(--accent);">hello@tabeer1.com</a>
-              </div>
-            </div>
-            <div class="info-item">
-              <div class="info-icon" style="background:#25d366/15;color:#25d366;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-              </div>
-              <div>
-                <p class="info-label">واتساب / هاتف</p>
-                <a href="https://wa.me/message/N2KKMN6IP34GB1" target="_blank" class="info-value" dir="ltr" style="color:var(--accent);">+966 56 085 8614</a>
-              </div>
-            </div>
-            <div class="info-item">
-              <div class="info-icon">🕐</div>
-              <div>
-                <p class="info-label">ساعات العمل</p>
-                <p class="info-value">السبت - الخميس: 9 ص - 9 م</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Social -->
-          <div class="social-card">
-            <p class="social-title" style="margin-bottom:1rem;">تابعينا على السوشال ميديا</p>
-            <div style="display:flex;flex-direction:column;gap:0.75rem;">
-              <a href="https://www.instagram.com/tabeer_1.1/" target="_blank" style="display:flex;align-items:center;gap:0.75rem;color:var(--foreground);transition:color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--foreground)'">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                <span style="font-size:0.875rem;">@tabeer_1.1</span>
-              </a>
-              <a href="https://www.tiktok.com/@tabeer_1.1" target="_blank" style="display:flex;align-items:center;gap:0.75rem;color:var(--foreground);transition:color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--foreground)'">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.17 8.17 0 004.79 1.52V6.75a4.85 4.85 0 01-1.02-.06z"/></svg>
-                <span style="font-size:0.875rem;">@tabeer_1.1</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- TikTok embed -->
-          <div style="margin-top:1rem;">
-            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@tabeer_1.1" data-unique-id="tabeer_1.1" data-embed-type="creator" style="max-width:100%;min-width:288px;">
-              <section><a target="_blank" href="https://www.tiktok.com/@tabeer_1.1?refer=creator_embed">@tabeer_1.1</a></section>
-            </blockquote>
-            <script async src="https://www.tiktok.com/embed.js"></script>
-          </div>
+        <div style="margin-top:2rem">
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@tabeer_1.1" data-unique-id="tabeer_1.1" data-embed-type="creator" style="max-width:100%;min-width:288px;border:1px solid rgba(255,255,255,.1)"><section><a target="_blank" href="https://www.tiktok.com/@tabeer_1.1?refer=creator_embed">@tabeer_1.1</a></section></blockquote>
+          <script async src="https://www.tiktok.com/embed.js"></script>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- SHARED FOOTER -->
+  </div>
   <div id="footer-contact"></div>
 </div>
 
-<!-- ============================================================
+<!-- ════════════════════════════════════════════
      PAGE: PRIVACY
-     ============================================================ -->
+════════════════════════════════════════════ -->
 <div class="page" id="page-privacy">
-  <section style="padding:4rem 1.5rem;">
-    <div class="container" style="max-width:52rem;">
-      <div style="margin-bottom:3rem;">
-        <p class="section-tag">الشفافية والأمان</p>
-        <h1 class="section-title" style="margin-top:0.75rem;">سياسة الخصوصية</h1>
-        <p style="color:var(--muted-foreground);margin-top:0.75rem;line-height:1.8;">في متجر تعبير، نؤمن بأن كل عميل يستحق تجربة استثنائية، ليست فقط في المنتجات التي نقدمها، بل أيضًا في كيفية تعاملنا مع بياناتك الشخصية.</p>
-      </div>
-      <div class="policy-body">
-        <div class="policy-section">
-          <h3>1. المعلومات التي نجمعها</h3>
-          <ul>
-            <li>الاسم الكامل لضمان تخصيص خدماتنا حسب احتياجاتك.</li>
-            <li>معلومات الاتصال مثل رقم الهاتف لتحديثك بكل ما يخص طلباتك.</li>
-            <li>عنوان الشحن لضمان وصول منتجاتنا الفاخرة إليك بسلاسة.</li>
-            <li>تفاصيل الطلبات السابقة لنمنحك تجربة شراء أكثر تخصيصًا مع كل زيارة.</li>
-          </ul>
-        </div>
-        <div class="policy-section">
-          <h3>2. كيف نستخدم معلوماتك؟</h3>
-          <ul>
-            <li>معالجة طلباتك بكل سرعة ودقة.</li>
-            <li>تقديم تجربة تسوق شخصية تُشعر كل عميل بالتميز.</li>
-            <li>إبقاؤك على اطلاع بأحدث إصداراتنا ومنتجاتنا الفاخرة.</li>
-            <li>توفير خدمة عملاء راقية تُعنى بكل استفسار وطلب.</li>
-          </ul>
-        </div>
-        <div class="policy-section">
-          <h3>3. حماية بياناتك</h3>
-          <p>نحن ملتزمون بأعلى معايير الأمان. كل بياناتك الشخصية تُعامل بسرية تامة، ولا يتم الوصول إليها أو استخدامها إلا من قبل فريق متخصص ومُدرب لضمان أعلى درجات الحماية.</p>
-        </div>
-        <div class="policy-section">
-          <h3>4. الاحتفاظ بالبيانات</h3>
-          <p>نحتفظ ببياناتك لفترة زمنية تتناسب مع تقديم خدماتنا بطريقة مثالية. بعد انتهاء الأغراض المطلوبة، نعمل على حذف بياناتك أو إخفائها بطريقة آمنة.</p>
-        </div>
-        <div class="policy-section">
-          <h3>5. مشاركة المعلومات</h3>
-          <p>لا نشارك معلوماتك مع أي جهة خارجية إلا إذا كان ذلك ضروريًا لإتمام عملياتك، مثل شركات الشحن الموثوقة التي نتعامل معها بعناية.</p>
-        </div>
-        <div class="policy-section">
-          <h3>6. بيانات الدفع</h3>
-          <p>كل عمليات الدفع تُنفذ عبر بوابات آمنة تلتزم بأعلى معايير الأمان. لا نحتفظ ببيانات بطاقاتك المصرفية، مما يضمن لك تجربة شراء آمنة تمامًا.</p>
-        </div>
-        <div class="policy-section">
-          <h3>7. ملفات تعريف الارتباط (Cookies)</h3>
-          <p>نستخدم ملفات تعريف الارتباط لتحسين تجربة تصفحك وتقديم محتوى يناسب ذوقك الفريد.</p>
-        </div>
-        <div class="policy-section">
-          <h3>8. حقوقك كعميل</h3>
-          <ul>
-            <li>الوصول إلى معلوماتك الشخصية وتصحيحها أو تعديلها.</li>
-            <li>طلب حذف معلوماتك في أي وقت.</li>
-            <li>الاعتراض على استخدام بياناتك لأغراض التسويق.</li>
-          </ul>
-        </div>
-        <div class="policy-section">
-          <h3>9. سحب الموافقة والتواصل</h3>
-          <p>يمكنك في أي وقت سحب موافقتك أو الاستفسار عبر واتساب: <a href="https://wa.me/message/N2KKMN6IP34GB1" target="_blank" dir="ltr" style="color:var(--accent);">+966 56 085 8614</a></p>
-        </div>
-      </div>
+  <div class="policy-wrap">
+    <span class="eyebrow">الشفافية والأمان</span>
+    <h1 class="policy-page-title">سياسة الخصوصية</h1>
+    <p class="policy-intro">في متجر تعبير، نؤمن بأن كل عميل يستحق تجربة استثنائية، ليست فقط في المنتجات التي نقدمها، بل أيضًا في كيفية تعاملنا مع بياناتك الشخصية.</p>
+    <div class="policy-body">
+      <div class="policy-sec"><h3>١. المعلومات التي نجمعها</h3><ul><li>الاسم الكامل لضمان تخصيص خدماتنا حسب احتياجاتك.</li><li>معلومات الاتصال مثل رقم الهاتف لتحديثك بكل ما يخص طلباتك.</li><li>عنوان الشحن لضمان وصول منتجاتنا الفاخرة إليك بسلاسة.</li><li>تفاصيل الطلبات السابقة لنمنحك تجربة شراء أكثر تخصيصًا.</li></ul></div>
+      <div class="policy-sec"><h3>٢. كيف نستخدم معلوماتك؟</h3><ul><li>معالجة طلباتك بكل سرعة ودقة.</li><li>تقديم تجربة تسوق شخصية تُشعر كل عميل بالتميز.</li><li>إبقاؤك على اطلاع بأحدث إصداراتنا ومنتجاتنا الفاخرة.</li><li>توفير خدمة عملاء راقية تُعنى بكل استفسار وطلب.</li></ul></div>
+      <div class="policy-sec"><h3>٣. حماية بياناتك</h3><p>نحن ملتزمون بأعلى معايير الأمان. كل بياناتك الشخصية تُعامل بسرية تامة، ولا يتم الوصول إليها إلا من قبل فريق متخصص ومُدرب.</p></div>
+      <div class="policy-sec"><h3>٤. الاحتفاظ بالبيانات</h3><p>نحتفظ ببياناتك لفترة زمنية تتناسب مع تقديم خدماتنا. بعد انتهاء الأغراض المطلوبة، نعمل على حذف بياناتك بطريقة آمنة.</p></div>
+      <div class="policy-sec"><h3>٥. مشاركة المعلومات</h3><p>لا نشارك معلوماتك مع أي جهة خارجية إلا إذا كان ذلك ضروريًا لإتمام عملياتك، مثل شركات الشحن الموثوقة.</p></div>
+      <div class="policy-sec"><h3>٦. بيانات الدفع</h3><p>كل عمليات الدفع تُنفذ عبر بوابات آمنة. لا نحتفظ ببيانات بطاقاتك المصرفية.</p></div>
+      <div class="policy-sec"><h3>٧. ملفات تعريف الارتباط</h3><p>نستخدم ملفات تعريف الارتباط لتحسين تجربة تصفحك وتقديم محتوى يناسب ذوقك الفريد.</p></div>
+      <div class="policy-sec"><h3>٨. حقوقك كعميل</h3><ul><li>الوصول إلى معلوماتك الشخصية وتصحيحها أو تعديلها.</li><li>طلب حذف معلوماتك في أي وقت.</li><li>الاعتراض على استخدام بياناتك لأغراض التسويق.</li></ul></div>
+      <div class="policy-sec"><h3>٩. التواصل</h3><p>يمكنك الاستفسار عبر واتساب: <a href="https://wa.me/message/N2KKMN6IP34GB1" target="_blank" dir="ltr">+966 56 085 8614</a></p></div>
     </div>
-  </section>
+  </div>
   <div id="footer-privacy"></div>
 </div>
 
-<!-- ============================================================
+<!-- ════════════════════════════════════════════
      PAGE: RETURNS
-     ============================================================ -->
+════════════════════════════════════════════ -->
 <div class="page" id="page-returns">
-  <section style="padding:4rem 1.5rem;">
-    <div class="container" style="max-width:52rem;">
-      <div style="margin-bottom:3rem;">
-        <p class="section-tag">رضاكم غايتنا</p>
-        <h1 class="section-title" style="margin-top:0.75rem;">سياسة الاستبدال والاسترجاع</h1>
-        <p style="color:var(--muted-foreground);margin-top:0.75rem;line-height:1.8;">نحرص على أن تكون تجربتكم معنا استثنائية منذ لحظة الطلب وحتى ما بعد الاستلام.</p>
-      </div>
-      <div class="policy-body">
-        <div class="policy-section">
-          <h3>شروط الاستبدال والاسترجاع</h3>
-          <p>يمكنكم طلب استبدال أو استرجاع المنتج خلال <strong>24 ساعة</strong> من تاريخ استلامه، بشرط أن يكون:</p>
-          <ul>
-            <li>غير مستخدم.</li>
-            <li>بحالته الأصلية مع التغليف السليم.</li>
-          </ul>
-        </div>
-        <div class="policy-section">
-          <h3>الحالات المؤهلة</h3>
-          <ul>
-            <li>وجود عيوب مصنعية أو تلف.</li>
-            <li>خطأ في المنتج المرسل واختلافه بشكل واضح.</li>
-          </ul>
-        </div>
-        <div class="policy-section">
-          <h3>خيارات الاستبدال والاسترجاع</h3>
-          <ul>
-            <li>استرجاع قيمة المنتج عبر نفس وسيلة الدفع المستخدمة.</li>
-            <li>استبدال المنتج بمنتج آخر بنفس القيمة.</li>
-            <li>استبدال المقاس لضمان راحتكم المثالية.</li>
-          </ul>
-        </div>
-        <div class="policy-section">
-          <h3>ملاحظة مهمة</h3>
-          <p>يتحمل العميل تكاليف شحن <strong>25 ريال</strong> لكل اتجاه في حالات الاستبدال أو الاسترجاع، إلا إذا كان السبب وجود عيب مصنعي أو خطأ من طرفنا.</p>
-        </div>
-        <div class="policy-section">
-          <h3>كيفية تقديم طلب الاستبدال أو الاسترجاع</h3>
-          <p>للتواصل وطلب الاستبدال أو الاسترجاع عبر واتساب: <a href="https://wa.me/message/N2KKMN6IP34GB1" target="_blank" dir="ltr" style="color:var(--accent);">+966 56 085 8614</a> — سنرد خلال 24 ساعة.</p>
-        </div>
-        <div class="policy-section">
-          <h3>سياسة الإلغاء ورد الأموال</h3>
-          <ul>
-            <li>يمكن إلغاء الطلب خلال <strong>12 ساعة</strong> فقط من وقت تأكيده.</li>
-            <li>في حال الإلغاء خلال 12 ساعة: رد كامل للمبلغ خلال 5 أيام عمل.</li>
-            <li>المنتجات المخصصة لا يمكن إلغاؤها أو استرداد قيمتها بعد بدء التصنيع.</li>
-          </ul>
-        </div>
-      </div>
+  <div class="policy-wrap">
+    <span class="eyebrow">رضاكم غايتنا</span>
+    <h1 class="policy-page-title">الاستبدال والاسترجاع</h1>
+    <p class="policy-intro">نحرص على أن تكون تجربتكم معنا استثنائية منذ لحظة الطلب وحتى ما بعد الاستلام.</p>
+    <div class="policy-body">
+      <div class="policy-sec"><h3>شروط الاستبدال والاسترجاع</h3><p>يمكنكم طلب استبدال أو استرجاع المنتج خلال <strong>٢٤ ساعة</strong> من تاريخ استلامه، بشرط أن يكون:</p><ul><li>غير مستخدم.</li><li>بحالته الأصلية مع التغليف السليم.</li></ul></div>
+      <div class="policy-sec"><h3>الحالات المؤهلة</h3><ul><li>وجود عيوب مصنعية أو تلف.</li><li>خطأ في المنتج المرسل واختلافه بشكل واضح.</li></ul></div>
+      <div class="policy-sec"><h3>خيارات الاستبدال والاسترجاع</h3><ul><li>استرجاع قيمة المنتج عبر نفس وسيلة الدفع المستخدمة.</li><li>استبدال المنتج بمنتج آخر بنفس القيمة.</li><li>استبدال المقاس لضمان راحتكم المثالية.</li></ul></div>
+      <div class="policy-sec"><h3>ملاحظة مهمة</h3><p>يتحمل العميل تكاليف شحن <strong>٢٥ ريال</strong> لكل اتجاه، إلا إذا كان السبب وجود عيب مصنعي أو خطأ من طرفنا.</p></div>
+      <div class="policy-sec"><h3>كيفية تقديم الطلب</h3><p>للتواصل عبر واتساب: <a href="https://wa.me/message/N2KKMN6IP34GB1" target="_blank" dir="ltr">+966 56 085 8614</a></p></div>
+      <div class="policy-sec"><h3>سياسة الإلغاء ورد الأموال</h3><ul><li>يمكن إلغاء الطلب خلال <strong>١٢ ساعة</strong> فقط من وقت تأكيده.</li><li>في حال الإلغاء: رد كامل للمبلغ خلال ٥ أيام عمل.</li><li>المنتجات المخصصة لا يمكن إلغاؤها بعد بدء التصنيع.</li></ul></div>
     </div>
-  </section>
+  </div>
   <div id="footer-returns"></div>
 </div>
 
-<!-- ============================================================
+<!-- ════════════════════════════════════════════
      PAGE: PAYMENT
-     ============================================================ -->
+════════════════════════════════════════════ -->
 <div class="page" id="page-payment">
-  <section style="padding:4rem 1.5rem;">
-    <div class="container" style="max-width:52rem;">
-      <div style="margin-bottom:3rem;">
-        <p class="section-tag">مرونة وأمان</p>
-        <h1 class="section-title" style="margin-top:0.75rem;">طرق الدفع</h1>
-        <p style="color:var(--muted-foreground);margin-top:0.75rem;line-height:1.8;">نوفر لكم خيارات دفع مرنة وآمنة تناسب أسلوبكم الراقي.</p>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;margin-bottom:3rem;" class="pay-grid">
-        <div style="background:var(--card);border:1px solid var(--border);padding:1.75rem;">
-          <div style="font-size:1.75rem;margin-bottom:0.75rem;">🍎</div>
-          <h3 style="font-family:'Playfair Display','Amiri',serif;font-size:1.1rem;color:var(--primary);margin-bottom:0.5rem;">Apple Pay</h3>
-          <p style="font-size:0.875rem;color:var(--muted-foreground);line-height:1.7;">دفع سريع وسلس بضغطة واحدة.</p>
-        </div>
-        <div style="background:var(--card);border:1px solid var(--border);padding:1.75rem;">
-          <div style="font-size:1.75rem;margin-bottom:0.75rem;">💳</div>
-          <h3 style="font-family:'Playfair Display','Amiri',serif;font-size:1.1rem;color:var(--primary);margin-bottom:0.5rem;">البطاقات الإلكترونية</h3>
-          <p style="font-size:0.875rem;color:var(--muted-foreground);line-height:1.7;">Visa، MasterCard، وMada بأعلى مستويات الأمان.</p>
-        </div>
-        <div style="background:var(--card);border:1px solid var(--border);padding:1.75rem;">
-          <div style="font-size:1.75rem;margin-bottom:0.75rem;">🏦</div>
-          <h3 style="font-family:'Playfair Display','Amiri',serif;font-size:1.1rem;color:var(--primary);margin-bottom:0.5rem;">التحويل البنكي</h3>
-          <p style="font-size:0.875rem;color:var(--muted-foreground);line-height:1.7;">تحويل مباشر لحسابنا البنكي مع تأكيد سريع.</p>
-        </div>
-        <div style="background:var(--card);border:1px solid var(--border);padding:1.75rem;">
-          <div style="font-size:1.75rem;margin-bottom:0.75rem;">✦</div>
-          <h3 style="font-family:'Playfair Display','Amiri',serif;font-size:1.1rem;color:var(--primary);margin-bottom:0.5rem;">تابي وتمارا</h3>
-          <p style="font-size:0.875rem;color:var(--muted-foreground);line-height:1.7;">قسّمي المبلغ على 4 دفعات بدون فوائد.</p>
-        </div>
-      </div>
-      <div style="background:var(--primary);color:var(--primary-foreground);padding:2rem;text-align:center;">
-        <p style="font-family:'Playfair Display','Amiri',serif;font-size:1.25rem;margin-bottom:0.5rem;">جميع المدفوعات آمنة 100%</p>
-        <p style="color:oklch(0.97 0.012 80 / 0.7);font-size:0.9rem;">نستخدم بوابات دفع معتمدة لحماية بياناتك المالية.</p>
-      </div>
+  <div class="policy-wrap">
+    <span class="eyebrow">مرونة وأمان</span>
+    <h1 class="policy-page-title">طرق الدفع</h1>
+    <p class="policy-intro">نوفر لكم خيارات دفع مرنة وآمنة تناسب أسلوبكم الراقي.</p>
+    <div class="pay-grid">
+      <div class="pay-card"><span class="pay-emoji">🍎</span><h3 class="pay-t">Apple Pay</h3><p class="pay-s">دفع سريع وسلس بضغطة واحدة.</p></div>
+      <div class="pay-card"><span class="pay-emoji">💳</span><h3 class="pay-t">البطاقات الإلكترونية</h3><p class="pay-s">Visa, MasterCard, وMada بأعلى مستويات الأمان.</p></div>
+      <div class="pay-card"><span class="pay-emoji">🏦</span><h3 class="pay-t">التحويل البنكي</h3><p class="pay-s">تحويل مباشر لحسابنا البنكي مع تأكيد سريع.</p></div>
+      <div class="pay-card"><span class="pay-emoji">✦</span><h3 class="pay-t">تابي وتمارا</h3><p class="pay-s">قسّمي المبلغ على ٤ دفعات بدون فوائد.</p></div>
     </div>
-  </section>
+    <div class="pay-secure"><p class="pay-secure-t">جميع المدفوعات آمنة ١٠٠٪</p><p class="pay-secure-s">نستخدم بوابات دفع معتمدة لحماية بياناتك المالية</p></div>
+  </div>
   <div id="footer-payment"></div>
 </div>
 
-<!-- ============================================================
+<!-- ════════════════════════════════════════════
      PAGE: GIFT
-     ============================================================ -->
+════════════════════════════════════════════ -->
 <div class="page" id="page-gift">
-  <section style="padding:4rem 1.5rem;">
-    <div class="container" style="max-width:52rem;">
-      <div style="text-align:center;margin-bottom:3.5rem;">
-        <p class="section-tag">نشاركك الفرحة</p>
-        <h1 class="section-title" style="margin-top:0.75rem;">توصيل الهدايا 🎁</h1>
-        <p style="color:var(--muted-foreground);margin-top:1rem;line-height:1.85;max-width:36rem;margin-inline:auto;">
-          نوصل هديتك بكل حب وسهولة! إرسال الهدايا لم يكن أسهل من الآن.
-        </p>
-      </div>
-      <div style="background:var(--card);border:1px solid var(--border);padding:2.5rem;margin-bottom:2rem;">
-        <h3 style="font-family:'Playfair Display','Amiri',serif;font-size:1.375rem;color:var(--primary);margin-bottom:1.5rem;">كيف تطلبين هدية؟</h3>
-        <div style="display:flex;flex-direction:column;gap:1.25rem;">
-          <div style="display:flex;gap:1rem;align-items:flex-start;">
-            <div style="background:var(--accent);color:var(--accent-foreground);width:2rem;height:2rem;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.875rem;font-weight:700;flex-shrink:0;">1</div>
-            <div>
-              <p style="font-weight:500;color:var(--primary);margin-bottom:0.25rem;">اختاري المنتج</p>
-              <p style="font-size:0.9rem;color:var(--muted-foreground);line-height:1.7;">تصفّحي مجموعتنا واختاري القطعة المناسبة كهدية.</p>
-            </div>
-          </div>
-          <div style="display:flex;gap:1rem;align-items:flex-start;">
-            <div style="background:var(--accent);color:var(--accent-foreground);width:2rem;height:2rem;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.875rem;font-weight:700;flex-shrink:0;">2</div>
-            <div>
-              <p style="font-weight:500;color:var(--primary);margin-bottom:0.25rem;">عند تعبئة العنوان</p>
-              <p style="font-size:0.9rem;color:var(--muted-foreground);line-height:1.7;">اضغطي على خيار <strong>"استلام الطلب عبر شخص آخر"</strong> واكتبي بيانات المستلم.</p>
-            </div>
-          </div>
-          <div style="display:flex;gap:1rem;align-items:flex-start;">
-            <div style="background:var(--accent);color:var(--accent-foreground);width:2rem;height:2rem;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.875rem;font-weight:700;flex-shrink:0;">3</div>
-            <div>
-              <p style="font-weight:500;color:var(--primary);margin-bottom:0.25rem;">اختاري طريقة الدفع</p>
-              <p style="font-size:0.9rem;color:var(--muted-foreground);line-height:1.7;">Apple Pay، Mada، تابي، تمارا، Visa، أو التحويل البنكي — كلها متاحة!</p>
-            </div>
-          </div>
-          <div style="display:flex;gap:1rem;align-items:flex-start;">
-            <div style="background:var(--accent);color:var(--accent-foreground);width:2rem;height:2rem;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.875rem;font-weight:700;flex-shrink:0;">4</div>
-            <div>
-              <p style="font-weight:500;color:var(--primary);margin-bottom:0.25rem;">دعينا نهتم بالباقي!</p>
-              <p style="font-size:0.9rem;color:var(--muted-foreground);line-height:1.7;">نوصل هديتك بعناية وحب لتصل جميلة كما هي.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div style="text-align:center;">
-        <a href="https://wa.me/message/N2KKMN6IP34GB1" target="_blank" class="btn-primary" style="display:inline-block;padding:1rem 2.5rem;font-size:0.9375rem;">
-          تواصلي معنا عبر واتساب لطلب هديتك 🎁
-        </a>
-      </div>
+  <div class="policy-wrap">
+    <span class="eyebrow">نشارككِ الفرحة</span>
+    <h1 class="policy-page-title">توصيل الهدايا ✦</h1>
+    <p class="policy-intro">نوصل هديتكِ بكل حب وسهولة! إرسال الهدايا لم يكن أسهل من الآن.</p>
+    <div class="gift-steps" style="margin-top:2.5rem">
+      <div class="gift-step"><div class="step-num">١</div><div><p class="step-t">اختاري المنتج</p><p class="step-s">تصفّحي مجموعتنا واختاري القطعة المناسبة كهدية.</p></div></div>
+      <div class="gift-step"><div class="step-num">٢</div><div><p class="step-t">عند تعبئة العنوان</p><p class="step-s">اضغطي على خيار <strong>"استلام الطلب عبر شخص آخر"</strong> واكتبي بيانات المستلم.</p></div></div>
+      <div class="gift-step"><div class="step-num">٣</div><div><p class="step-t">اختاري طريقة الدفع</p><p class="step-s">Apple Pay, Mada, تابي, تمارا, Visa, أو التحويل البنكي — كلها متاحة!</p></div></div>
+      <div class="gift-step"><div class="step-num">٤</div><div><p class="step-t">دعينا نهتم بالباقي!</p><p class="step-s">نوصل هديتكِ بعناية وحب لتصل جميلة كما هي.</p></div></div>
     </div>
-  </section>
+    <div style="text-align:center;margin-top:2.5rem">
+      <a href="https://wa.me/message/N2KKMN6IP34GB1" target="_blank" class="btn-black" style="display:inline-block">تواصلي معنا عبر واتساب ✦</a>
+    </div>
+  </div>
   <div id="footer-gift"></div>
 </div>
 
-<!-- WHATSAPP FLOAT BUTTON -->
+<!-- WA FLOAT -->
 <a href="https://wa.me/message/N2KKMN6IP34GB1" target="_blank" class="wa-float" aria-label="واتساب">
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
 </a>
 
-<!-- ============================================================
-     JAVASCRIPT
-     ============================================================ -->
 <script>
-  /* ── Shared Footer HTML ─────────────────────────────── */
-  const footerHTML = `
-  <footer style="background:var(--primary);color:var(--primary-foreground);margin-top:auto;">
-    <div class="container" style="padding:4rem 1.5rem;">
-      <div class="footer-grid">
-        <div>
-          <div class="footer-brand-name">تعبير</div>
-          <div class="footer-brand-en">TA'BEER</div>
-          <p class="footer-brand-desc">اختلافكِ تعبيركِ.</p>
-          <div style="display:flex;gap:0.75rem;margin-top:1.25rem;">
-            <a href="https://www.instagram.com/tabeer_1.1/" target="_blank" style="color:oklch(0.97 0.012 80 / 0.6);transition:color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='oklch(0.97 0.012 80 / 0.6)'" aria-label="إنستقرام">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-            </a>
-            <a href="https://www.tiktok.com/@tabeer_1.1" target="_blank" style="color:oklch(0.97 0.012 80 / 0.6);transition:color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='oklch(0.97 0.012 80 / 0.6)'" aria-label="تيك توك">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.17 8.17 0 004.79 1.52V6.75a4.85 4.85 0 01-1.02-.06z"/></svg>
-            </a>
-            <a href="https://wa.me/message/N2KKMN6IP34GB1" target="_blank" style="color:oklch(0.97 0.012 80 / 0.6);transition:color 0.2s;" onmouseover="this.style.color='#25d366'" onmouseout="this.style.color='oklch(0.97 0.012 80 / 0.6)'" aria-label="واتساب">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-            </a>
-          </div>
-        </div>
-        <div>
-          <h4 class="footer-heading">المتجر</h4>
-          <ul class="footer-links">
-            <li><a href="#" onclick="window.location.href='https://shop.tabeer1.com'">جميع الحقائب</a></li>
-            <li><a href="#" onclick="window.location.href='https://shop.tabeer1.com'">الأكثر مبيعاً</a></li>
-            <li><a href="#" onclick="navigate('gift');return false;">إرسال هدية 🎁</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="footer-heading">خدمة العملاء</h4>
-          <ul class="footer-links">
-            <li><a href="#" onclick="navigate('contact');return false;">تواصلي معنا</a></li>
-            <li><a href="#" onclick="navigate('returns');return false;">الاستبدال والاسترجاع</a></li>
-            <li><a href="#" onclick="navigate('payment');return false;">طرق الدفع</a></li>
-            <li><a href="#" onclick="navigate('privacy');return false;">سياسة الخصوصية</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="footer-heading">تابعينا</h4>
-          <p class="footer-desc">اشتركي لتصلك أحدث المجموعات وعروض حصرية.</p>
-          <div class="footer-form">
-            <input class="footer-input" type="email" placeholder="بريدك الإلكتروني" />
-            <button class="footer-sub-btn">اشتراك</button>
-          </div>
-          <p style="font-size:0.75rem;color:oklch(0.97 0.012 80 / 0.5);margin-top:0.75rem;" dir="ltr">hello@tabeer1.com</p>
+/* ── CURSOR ─────────────────────────────────── */
+const cur = document.getElementById('cursor');
+const ring = document.getElementById('cursor-ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{
+  mx=e.clientX; my=e.clientY;
+  cur.style.left=mx+'px'; cur.style.top=my+'px';
+});
+function animRing(){
+  rx += (mx - rx) * .12;
+  ry += (my - ry) * .12;
+  ring.style.left=rx+'px'; ring.style.top=ry+'px';
+  requestAnimationFrame(animRing);
+}
+animRing();
+document.addEventListener('mouseleave',()=>{cur.style.opacity='0';ring.style.opacity='0'});
+document.addEventListener('mouseenter',()=>{cur.style.opacity='1';ring.style.opacity='1'});
+
+/* ── HEADER SCROLL ──────────────────────────── */
+const hdr = document.getElementById('site-header');
+window.addEventListener('scroll',()=>{
+  hdr.classList.toggle('scrolled', window.scrollY > 80);
+},{ passive:true });
+
+/* ── PRODUCTS DATA ──────────────────────────── */
+const PRODUCTS = [
+  {id:'noor',   name:'حقيبة نور',    cat:'توت',   price:'٧٤٩ ر.س',                  img:'bag1.jpg', badge:'best'},
+  {id:'lulwa',  name:'حقيبة لؤلؤة', cat:'كتف',   price:'٨٩٩ ر.س', oldPrice:'١٠٩٩ ر.س', img:'bag2.jpg', badge:'sale'},
+  {id:'rimas',  name:'حقيبة ريماس', cat:'كروس',  price:'٦٢٩ ر.س',                  img:'bag3.jpg', badge:'new'},
+  {id:'warood', name:'حقيبة ورود',   cat:'ميني',  price:'٥٤٩ ر.س',                  img:'bag4.jpg', badge:'new'},
+  {id:'yasmin', name:'حقيبة ياسمين', cat:'باكيت', price:'٦٧٩ ر.س',                  img:'bag5.jpg'},
+  {id:'rubab',  name:'حقيبة رباب',   cat:'هوبو',  price:'٨١٩ ر.س', oldPrice:'٩٩٩ ر.س',  img:'bag6.jpg', badge:'sale'},
+];
+
+function productCardHTML(p, idx){
+  const badge = p.badge === 'new'  ? `<span class="badge-new">جديد</span>` :
+                p.badge === 'best' ? `<span class="badge-best">الأكثر مبيعاً</span>` :
+                p.badge === 'sale' ? `<span class="badge-sale">خصم</span>` : '';
+  const old = p.oldPrice ? `<span class="product-old">${p.oldPrice}</span>` : '';
+  return `
+    <a class="product-card reveal" href="https://shop.tabeer1.com" target="_self"
+       style="transition-delay:${idx * .08}s;text-decoration:none">
+      <div class="product-img-wrap">
+        <img class="product-img" src="${p.img}" alt="${p.name}" loading="lazy"/>
+        ${badge}
+        <div class="product-overlay">
+          <span class="overlay-title">${p.name}</span>
+          <span class="overlay-price">${p.cat}</span>
+          <span class="overlay-btn">تسوّقي الآن</span>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>© 2026 تعبير. جميع الحقوق محفوظة.</p>
-        <p>صُنع بحب في المملكة العربية السعودية 🇸🇦</p>
+      <div class="product-info">
+        <span class="product-name">${p.name}</span>
+        <span class="product-price">${p.price} ${old}</span>
+      </div>
+    </a>`;
+}
+
+/* Inject grids */
+const pg = document.getElementById('productsGrid');
+const fg = document.getElementById('featuredGrid');
+if(pg) pg.innerHTML = PRODUCTS.slice(0,4).map((p,i)=>productCardHTML(p,i)).join('');
+if(fg) fg.innerHTML = PRODUCTS.slice(4).concat(PRODUCTS.slice(0,1)).map((p,i)=>productCardHTML(p,i)).join('');
+
+/* ── FOOTER ─────────────────────────────────── */
+const IGS=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg>`;
+const TKS=`<svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.17 8.17 0 004.79 1.52V6.75a4.85 4.85 0 01-1.02-.06z"/></svg>`;
+const WAS=`<svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>`;
+
+const FOOTER=`
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img src="logo-black.png" alt="تعبير" class="footer-logo"/>
+        <p class="footer-tagline">اختلافكِ تعبيركِ — حقائب نسائية فاخرة، كل قطعة واحدة فقط.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/tabeer_1.1/" target="_blank" class="footer-soc" aria-label="Instagram">${IGS}</a>
+          <a href="https://www.tiktok.com/@tabeer_1.1" target="_blank" class="footer-soc" aria-label="TikTok">${TKS}</a>
+          <a href="https://wa.me/message/N2KKMN6IP34GB1" target="_blank" class="footer-soc" style="color:#25d366" aria-label="WhatsApp">${WAS}</a>
+        </div>
+      </div>
+      <div>
+        <span class="footer-col-title">المتجر</span>
+        <ul class="footer-links">
+          <li><a href="https://shop.tabeer1.com" target="_self">جميع الحقائب</a></li>
+          <li><a href="https://shop.tabeer1.com" target="_self">الأكثر مبيعاً</a></li>
+          <li><a href="#" onclick="navigate('gift');return false;">إرسال هدية ✦</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-col-title">خدمة العملاء</span>
+        <ul class="footer-links">
+          <li><a href="#" onclick="navigate('contact');return false;">تواصلي معنا</a></li>
+          <li><a href="#" onclick="navigate('returns');return false;">الاستبدال والاسترجاع</a></li>
+          <li><a href="#" onclick="navigate('payment');return false;">طرق الدفع</a></li>
+          <li><a href="#" onclick="navigate('privacy');return false;">سياسة الخصوصية</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-col-title">النشرة البريدية</span>
+        <p class="footer-tagline">اشتركي لتصلكِ أحدث المجموعات وعروض حصرية.</p>
+        <div class="footer-email-form">
+          <input class="footer-email-inp" type="email" placeholder="بريدكِ الإلكتروني"/>
+          <button class="footer-sub-btn">اشتراك</button>
+        </div>
+        <span class="footer-email-addr" dir="ltr">hello@tabeer1.com</span>
       </div>
     </div>
-  </footer>`;
+    <div class="footer-bottom">
+      <span>© 2026 TABEER تعبير. جميع الحقوق محفوظة.</span>
+      <div style="display:flex;gap:1.5rem">
+        <a href="#" onclick="navigate('privacy');return false;">الخصوصية</a>
+        <a href="#" onclick="navigate('returns');return false;">الاستبدال</a>
+        <a href="https://wa.me/message/N2KKMN6IP34GB1" target="_blank" dir="ltr">+966 56 085 8614</a>
+      </div>
+    </div>
+  </div>
+</footer>`;
 
-  /* inject footer into all placeholders */
-  ['home','shop','about','contact','privacy','returns','payment','gift'].forEach(id => {
-    const el = document.getElementById('footer-' + id);
-    if (el) el.outerHTML = footerHTML;
-  });
+['home','about','contact','privacy','returns','payment','gift'].forEach(id=>{
+  const el=document.getElementById('footer-'+id);
+  if(el) el.outerHTML=FOOTER;
+});
 
-  /* ── Navigation ─────────────────────────────────────── */
-  function navigate(page) {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    const target = document.getElementById('page-' + page);
-    if (target) target.classList.add('active');
+/* ── NAVIGATION ─────────────────────────────── */
+function navigate(page){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  const t=document.getElementById('page-'+page);
+  if(t){ t.classList.add('active'); }
+  const mn=document.getElementById('mobileNav');if(mn)mn.classList.remove('open');
+  const hb=document.getElementById('hamBtn');if(hb)hb.classList.remove('open');
+  window.scrollTo({top:0,behavior:'smooth'});
+  setTimeout(revealAll, 200);
+}
 
-    document.querySelectorAll('.nav-link').forEach(a => {
-      a.classList.toggle('active', a.dataset.page === page);
+function toggleMobileNav(){
+  document.getElementById('mobileNav').classList.toggle('open');
+  document.getElementById('hamBtn').classList.toggle('open');
+}
+
+/* ── CONTACT FORM ───────────────────────────── */
+function submitContact(e){
+  e.preventDefault();
+  document.getElementById('formWrap').style.display='none';
+  document.getElementById('successMsg').style.display='block';
+}
+
+/* ── SCROLL REVEAL ──────────────────────────── */
+function revealAll(){
+  const obs = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('visible');
+        obs.unobserve(e.target);
+      }
     });
-
-    const mNav = document.getElementById('mobileNav');
-    if (mNav) mNav.classList.remove('open');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-
-    if (page === 'shop') {
-      // shop is embedded iframe — no action needed
-    }
-  }
-
-  function toggleMobileNav() {
-    document.getElementById('mobileNav').classList.toggle('open');
-  }
-
-  /* ── Contact form ───────────────────────────────────── */
-  function submitContact(e) {
-    e.preventDefault();
-    document.getElementById('formWrap').style.display = 'none';
-    document.getElementById('successMsg').style.display = 'block';
-  }
-
-  /* ── Boot ───────────────────────────────────────────── */
-  // inject shared footer into all pages
-
+  },{threshold:.12});
+  document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale').forEach(el=>obs.observe(el));
+}
+revealAll();
 </script>
 </body>
 </html>
